@@ -5,3 +5,4 @@ coverage
 .env.local
 .tmp
 .DS_Store
+.npmrc
