@@ -1,0 +1,58 @@
+{
+  "name": "@indreamai/openclaw-plugin",
+  "version": "0.1.0",
+  "description": "OpenClaw plugin for Indream video editor API workflows",
+  "type": "module",
+  "files": [
+    "dist",
+    "skills",
+    "openclaw.plugin.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts src/setup-entry.ts --format esm --dts --tsconfig tsconfig.build.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "eslint src tests",
+    "test": "vitest run"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "openclaw": {
+    "extensions": [
+      "./dist/index.js"
+    ],
+    "setupEntry": "./dist/setup-entry.js",
+    "compat": {
+      "pluginApi": ">=2026.4.2",
+      "minGatewayVersion": "2026.4.2"
+    },
+    "build": {
+      "openclawVersion": "2026.4.2",
+      "pluginSdkVersion": "2026.4.2"
+    },
+    "install": {
+      "npmSpec": "@indreamai/openclaw-plugin",
+      "localPath": ".",
+      "defaultChoice": "npm",
+      "minHostVersion": ">=2026.4.2"
+    }
+  },
+  "packageManager": "pnpm@10.26.1",
+  "dependencies": {
+    "@indreamai/client": "^0.3.0",
+    "@sinclair/typebox": "^0.34.49",
+    "mime-types": "^3.0.2",
+    "openclaw": "^2026.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.2",
+    "@typescript-eslint/eslint-plugin": "^8.58.0",
+    "@typescript-eslint/parser": "^8.58.0",
+    "eslint": "^10.2.0",
+    "eslint-config-prettier": "^10.1.8",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.2"
+  }
+}

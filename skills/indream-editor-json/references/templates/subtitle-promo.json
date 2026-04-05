@@ -1,0 +1,341 @@
+{
+  "compositionWidth": 1080,
+  "compositionHeight": 1920,
+  "timebaseTicksPerSecond": 240000,
+  "outputRatio": "9:16",
+  "tracks": [
+    {
+      "id": "track-media",
+      "hidden": false,
+      "muted": false,
+      "items": [
+        "item-bg-image"
+      ]
+    },
+    {
+      "id": "track-copy",
+      "hidden": false,
+      "muted": false,
+      "items": [
+        "item-title",
+        "item-cta"
+      ]
+    },
+    {
+      "id": "track-captions",
+      "hidden": false,
+      "muted": false,
+      "items": [
+        "item-captions"
+      ]
+    }
+  ],
+  "assets": {
+    "asset-bg-image": {
+      "id": "asset-bg-image",
+      "type": "image",
+      "filename": "vertical-bg.png",
+      "size": 0,
+      "remoteUrl": "https://r.indream.ai/system/presets/154c197a-92c3-4bef-8560-4b9b70688a57.png",
+      "remoteKey": null,
+      "mimeType": "image/png",
+      "width": 1024,
+      "height": 1024
+    },
+    "asset-captions": {
+      "id": "asset-captions",
+      "type": "caption",
+      "filename": "asset-captions.json",
+      "size": 0,
+      "remoteUrl": null,
+      "remoteKey": null,
+      "mimeType": "application/json",
+      "timingGranularity": "line",
+      "captions": [
+        {
+          "text": "Build faster scenes.",
+          "startMs": 0,
+          "endMs": 900
+        },
+        {
+          "text": "Validate before export.",
+          "startMs": 900,
+          "endMs": 2100
+        },
+        {
+          "text": "Keep subtitle timing readable.",
+          "startMs": 2100,
+          "endMs": 3300
+        },
+        {
+          "text": "Ship a clean final render.",
+          "startMs": 3300,
+          "endMs": 4500
+        }
+      ]
+    }
+  },
+  "items": {
+    "item-bg-image": {
+      "id": "item-bg-image",
+      "type": "image",
+      "startTicks": 0,
+      "durationTicks": 1200000,
+      "top": {
+        "value": 0,
+        "keyframes": []
+      },
+      "left": {
+        "value": 0,
+        "keyframes": []
+      },
+      "width": {
+        "value": 1080,
+        "keyframes": []
+      },
+      "height": {
+        "value": 1920,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "isDraggingInTimeline": false,
+      "assetId": "asset-bg-image",
+      "keepAspectRatio": true,
+      "borderRadius": {
+        "value": 0,
+        "keyframes": []
+      },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "cropLeft": {
+        "value": 0,
+        "keyframes": []
+      },
+      "cropTop": {
+        "value": 0,
+        "keyframes": []
+      },
+      "cropRight": {
+        "value": 0,
+        "keyframes": []
+      },
+      "cropBottom": {
+        "value": 0,
+        "keyframes": []
+      }
+    },
+    "item-title": {
+      "id": "item-title",
+      "type": "text",
+      "startTicks": 0,
+      "durationTicks": 336000,
+      "top": {
+        "value": 120,
+        "keyframes": []
+      },
+      "left": {
+        "value": 88,
+        "keyframes": []
+      },
+      "width": {
+        "value": 904,
+        "keyframes": []
+      },
+      "height": {
+        "value": 180,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "isDraggingInTimeline": false,
+      "text": "Subtitle Promo",
+      "color": "#ffffff",
+      "align": "center",
+      "fontFamily": "TikTok Sans",
+      "fontStyle": {
+        "variant": "normal",
+        "weight": "700"
+      },
+      "fontSize": 84,
+      "lineHeight": 1.1,
+      "letterSpacing": 0,
+      "resizeOnEdit": true,
+      "direction": "ltr",
+      "strokeWidth": 0,
+      "strokeColor": "#000000",
+      "background": null,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "animations": {
+        "in": {
+          "type": "slide-up",
+          "durationTicks": 80000,
+          "easing": "ease-out"
+        }
+      }
+    },
+    "item-cta": {
+      "id": "item-cta",
+      "type": "text",
+      "startTicks": 816000,
+      "durationTicks": 384000,
+      "top": {
+        "value": 1650,
+        "keyframes": []
+      },
+      "left": {
+        "value": 110,
+        "keyframes": []
+      },
+      "width": {
+        "value": 860,
+        "keyframes": []
+      },
+      "height": {
+        "value": 110,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "isDraggingInTimeline": false,
+      "text": "Use line-timed captions when subtitle animations are needed.",
+      "color": "#f8fafc",
+      "align": "center",
+      "fontFamily": "TikTok Sans",
+      "fontStyle": {
+        "variant": "normal",
+        "weight": "500"
+      },
+      "fontSize": 28,
+      "lineHeight": 1.1,
+      "letterSpacing": 0,
+      "resizeOnEdit": true,
+      "direction": "ltr",
+      "strokeWidth": 0,
+      "strokeColor": "#000000",
+      "background": {
+        "color": "#00000088",
+        "horizontalPadding": 20,
+        "borderRadius": 28
+      },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      }
+    },
+    "item-captions": {
+      "id": "item-captions",
+      "type": "captions",
+      "startTicks": 96000,
+      "durationTicks": 1104000,
+      "top": {
+        "value": 1320,
+        "keyframes": []
+      },
+      "left": {
+        "value": 120,
+        "keyframes": []
+      },
+      "width": {
+        "value": 840,
+        "keyframes": []
+      },
+      "height": {
+        "value": 220,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "isDraggingInTimeline": false,
+      "assetId": "asset-captions",
+      "fontFamily": "TikTok Sans",
+      "fontStyle": {
+        "variant": "normal",
+        "weight": "600"
+      },
+      "lineHeight": 1.2,
+      "letterSpacing": 0,
+      "fontSize": 80,
+      "align": "center",
+      "color": "#ffffff",
+      "highlightColor": "#39E508",
+      "strokeWidth": 4,
+      "strokeColor": "#000000",
+      "direction": "ltr",
+      "pageDurationInMilliseconds": 2000,
+      "captionStartInSeconds": 0,
+      "maxLines": 2,
+      "source": "manual",
+      "captionGroupId": "caption-group-1",
+      "background": null,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "animations": {
+        "in": {
+          "type": "fade",
+          "durationTicks": 48000,
+          "easing": "ease-out"
+        }
+      },
+      "captionAnimations": {
+        "in": {
+          "type": "converge",
+          "durationTicks": 48000
+        }
+      }
+    }
+  },
+  "transitions": {},
+  "globalBackground": {
+    "type": "color",
+    "color": "#020617",
+    "gradient": "linear-gradient(135deg, #020617 0%, #1d4ed8 100%)"
+  }
+}

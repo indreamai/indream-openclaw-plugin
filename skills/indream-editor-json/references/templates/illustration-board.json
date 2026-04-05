@@ -1,0 +1,480 @@
+{
+  "compositionWidth": 1280,
+  "compositionHeight": 720,
+  "timebaseTicksPerSecond": 240000,
+  "outputRatio": "16:9",
+  "tracks": [
+    {
+      "id": "track-shapes",
+      "hidden": false,
+      "muted": false,
+      "items": [
+        "item-shape-star",
+        "item-shape-circle",
+        "item-shape-triangle"
+      ]
+    },
+    {
+      "id": "track-illustration-1",
+      "hidden": false,
+      "muted": false,
+      "items": [
+        "item-illustration-1"
+      ]
+    },
+    {
+      "id": "track-illustration-2",
+      "hidden": false,
+      "muted": false,
+      "items": [
+        "item-illustration-2"
+      ]
+    },
+    {
+      "id": "track-illustration-3",
+      "hidden": false,
+      "muted": false,
+      "items": [
+        "item-illustration-3"
+      ]
+    },
+    {
+      "id": "track-copy",
+      "hidden": false,
+      "muted": false,
+      "items": [
+        "item-title",
+        "item-body"
+      ]
+    },
+    {
+      "id": "track-fx",
+      "hidden": false,
+      "muted": false,
+      "items": [
+        "item-filter"
+      ]
+    }
+  ],
+  "assets": {},
+  "items": {
+    "item-shape-star": {
+      "id": "item-shape-star",
+      "type": "solid",
+      "startTicks": 0,
+      "durationTicks": 960000,
+      "top": {
+        "value": 58,
+        "keyframes": []
+      },
+      "left": {
+        "value": 80,
+        "keyframes": []
+      },
+      "width": {
+        "value": 150,
+        "keyframes": []
+      },
+      "height": {
+        "value": 150,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "isDraggingInTimeline": false,
+      "color": "#f59e0b",
+      "shape": "star",
+      "keepAspectRatio": true,
+      "borderRadius": {
+        "value": 0,
+        "keyframes": []
+      },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      }
+    },
+    "item-shape-circle": {
+      "id": "item-shape-circle",
+      "type": "solid",
+      "startTicks": 0,
+      "durationTicks": 960000,
+      "top": {
+        "value": 520,
+        "keyframes": []
+      },
+      "left": {
+        "value": 1020,
+        "keyframes": []
+      },
+      "width": {
+        "value": 140,
+        "keyframes": []
+      },
+      "height": {
+        "value": 140,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "isDraggingInTimeline": false,
+      "color": "#ec4899",
+      "shape": "circle",
+      "keepAspectRatio": true,
+      "borderRadius": {
+        "value": 0,
+        "keyframes": []
+      },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      }
+    },
+    "item-shape-triangle": {
+      "id": "item-shape-triangle",
+      "type": "solid",
+      "startTicks": 0,
+      "durationTicks": 960000,
+      "top": {
+        "value": 560,
+        "keyframes": []
+      },
+      "left": {
+        "value": 120,
+        "keyframes": []
+      },
+      "width": {
+        "value": 180,
+        "keyframes": []
+      },
+      "height": {
+        "value": 140,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "isDraggingInTimeline": false,
+      "color": "#22c55e",
+      "shape": "triangle",
+      "keepAspectRatio": true,
+      "borderRadius": {
+        "value": 0,
+        "keyframes": []
+      },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      }
+    },
+    "item-illustration-1": {
+      "id": "item-illustration-1",
+      "type": "illustration",
+      "startTicks": 0,
+      "durationTicks": 960000,
+      "top": {
+        "value": 130,
+        "keyframes": []
+      },
+      "left": {
+        "value": 110,
+        "keyframes": []
+      },
+      "width": {
+        "value": 260,
+        "keyframes": []
+      },
+      "height": {
+        "value": 260,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "isDraggingInTimeline": false,
+      "illustrationName": "IHello",
+      "color": "#f8fafc",
+      "keepAspectRatio": true,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "animations": {
+        "in": {
+          "type": "slide-right",
+          "durationTicks": 80000,
+          "easing": "ease-out"
+        }
+      }
+    },
+    "item-illustration-2": {
+      "id": "item-illustration-2",
+      "type": "illustration",
+      "startTicks": 0,
+      "durationTicks": 960000,
+      "top": {
+        "value": 208,
+        "keyframes": []
+      },
+      "left": {
+        "value": 780,
+        "keyframes": []
+      },
+      "width": {
+        "value": 280,
+        "keyframes": []
+      },
+      "height": {
+        "value": 280,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "isDraggingInTimeline": false,
+      "illustrationName": "IProductDemo",
+      "color": "#38bdf8",
+      "keepAspectRatio": true,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "animations": {
+        "in": {
+          "type": "zoom-in",
+          "durationTicks": 80000,
+          "easing": "ease-out"
+        }
+      }
+    },
+    "item-illustration-3": {
+      "id": "item-illustration-3",
+      "type": "illustration",
+      "startTicks": 96000,
+      "durationTicks": 768000,
+      "top": {
+        "value": 380,
+        "keyframes": []
+      },
+      "left": {
+        "value": 450,
+        "keyframes": []
+      },
+      "width": {
+        "value": 230,
+        "keyframes": []
+      },
+      "height": {
+        "value": 230,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "isDraggingInTimeline": false,
+      "illustrationName": "IDataAnalysis",
+      "color": "#22c55e",
+      "keepAspectRatio": true,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "animations": {
+        "out": {
+          "type": "fade",
+          "durationTicks": 80000,
+          "easing": "ease-in"
+        }
+      }
+    },
+    "item-title": {
+      "id": "item-title",
+      "type": "text",
+      "startTicks": 0,
+      "durationTicks": 960000,
+      "top": {
+        "value": 38,
+        "keyframes": []
+      },
+      "left": {
+        "value": 300,
+        "keyframes": []
+      },
+      "width": {
+        "value": 700,
+        "keyframes": []
+      },
+      "height": {
+        "value": 90,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "isDraggingInTimeline": false,
+      "text": "Illustration Board",
+      "color": "#ffffff",
+      "align": "center",
+      "fontFamily": "TikTok Sans",
+      "fontStyle": {
+        "variant": "normal",
+        "weight": "700"
+      },
+      "fontSize": 60,
+      "lineHeight": 1.1,
+      "letterSpacing": 0,
+      "resizeOnEdit": true,
+      "direction": "ltr",
+      "strokeWidth": 0,
+      "strokeColor": "#000000",
+      "background": null,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      }
+    },
+    "item-body": {
+      "id": "item-body",
+      "type": "text",
+      "startTicks": 48000,
+      "durationTicks": 864000,
+      "top": {
+        "value": 620,
+        "keyframes": []
+      },
+      "left": {
+        "value": 240,
+        "keyframes": []
+      },
+      "width": {
+        "value": 800,
+        "keyframes": []
+      },
+      "height": {
+        "value": 70,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "isDraggingInTimeline": false,
+      "text": "Use live illustration names for hand-drawn vector compositions and combine them with simple geometric shapes.",
+      "color": "#f8fafc",
+      "align": "center",
+      "fontFamily": "TikTok Sans",
+      "fontStyle": {
+        "variant": "normal",
+        "weight": "500"
+      },
+      "fontSize": 22,
+      "lineHeight": 1.1,
+      "letterSpacing": 0,
+      "resizeOnEdit": true,
+      "direction": "ltr",
+      "strokeWidth": 0,
+      "strokeColor": "#000000",
+      "background": {
+        "color": "#00000066",
+        "horizontalPadding": 16,
+        "borderRadius": 20
+      },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      }
+    },
+    "item-filter": {
+      "id": "item-filter",
+      "type": "filter",
+      "filterType": "sakura-pink",
+      "intensity": 1,
+      "startTicks": 0,
+      "durationTicks": 960000,
+      "isDraggingInTimeline": false,
+      "params": {
+        "blend": 0.66
+      }
+    }
+  },
+  "transitions": {},
+  "globalBackground": {
+    "type": "image",
+    "imageAssetId": null,
+    "imageUrl": "https://r.indream.ai/system/presets/d6f6de7b-2c38-4f9c-82d5-79adac647911.png",
+    "source": "preset"
+  }
+}

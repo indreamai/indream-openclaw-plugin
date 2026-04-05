@@ -1,0 +1,654 @@
+{
+  "compositionWidth": 1280,
+  "compositionHeight": 720,
+  "timebaseTicksPerSecond": 240000,
+  "outputRatio": "16:9",
+  "tracks": [
+    {
+      "id": "track-background",
+      "hidden": false,
+      "muted": false,
+      "items": [
+        "item-bg"
+      ]
+    },
+    {
+      "id": "track-charts",
+      "hidden": false,
+      "muted": false,
+      "items": [
+        "item-chart-line",
+        "item-chart-bar",
+        "item-chart-pie"
+      ]
+    },
+    {
+      "id": "track-overlay",
+      "hidden": false,
+      "muted": false,
+      "items": [
+        "item-title",
+        "item-note-line",
+        "item-note-bar",
+        "item-note-pie",
+        "item-illustration"
+      ]
+    },
+    {
+      "id": "track-fx",
+      "hidden": false,
+      "muted": false,
+      "items": [
+        "item-filter-bar"
+      ]
+    }
+  ],
+  "assets": {},
+  "items": {
+    "item-bg": {
+      "id": "item-bg",
+      "type": "solid",
+      "startTicks": 0,
+      "durationTicks": 1680000,
+      "top": {
+        "value": 0,
+        "keyframes": []
+      },
+      "left": {
+        "value": 0,
+        "keyframes": []
+      },
+      "width": {
+        "value": 1280,
+        "keyframes": []
+      },
+      "height": {
+        "value": 720,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "isDraggingInTimeline": false,
+      "color": "#0f172a",
+      "shape": "rectangle",
+      "keepAspectRatio": false,
+      "borderRadius": {
+        "value": 0,
+        "keyframes": []
+      },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      }
+    },
+    "item-chart-line": {
+      "id": "item-chart-line",
+      "type": "chart",
+      "startTicks": 0,
+      "durationTicks": 560000,
+      "top": {
+        "value": 140,
+        "keyframes": []
+      },
+      "left": {
+        "value": 120,
+        "keyframes": []
+      },
+      "width": {
+        "value": 1040,
+        "keyframes": []
+      },
+      "height": {
+        "value": 420,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "isDraggingInTimeline": false,
+      "chartType": "line",
+      "themeColor": "#3b82f6",
+      "data": {
+        "series": [
+          {
+            "key": "seriesA",
+            "label": "Series A"
+          },
+          {
+            "key": "seriesB",
+            "label": "Series B"
+          }
+        ],
+        "rows": [
+          {
+            "label": "Jan",
+            "values": {
+              "seriesA": 42,
+              "seriesB": 35
+            }
+          },
+          {
+            "label": "Feb",
+            "values": {
+              "seriesA": 58,
+              "seriesB": 46
+            }
+          },
+          {
+            "label": "Mar",
+            "values": {
+              "seriesA": 51,
+              "seriesB": 63
+            }
+          },
+          {
+            "label": "Apr",
+            "values": {
+              "seriesA": 76,
+              "seriesB": 69
+            }
+          },
+          {
+            "label": "May",
+            "values": {
+              "seriesA": 90,
+              "seriesB": 82
+            }
+          }
+        ]
+      },
+      "animationDurationTicks": 192000,
+      "keepAspectRatio": false,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "animations": {
+        "in": {
+          "type": "fade",
+          "durationTicks": 80000,
+          "easing": "ease-out"
+        }
+      }
+    },
+    "item-chart-bar": {
+      "id": "item-chart-bar",
+      "type": "chart",
+      "startTicks": 560000,
+      "durationTicks": 560000,
+      "top": {
+        "value": 140,
+        "keyframes": []
+      },
+      "left": {
+        "value": 120,
+        "keyframes": []
+      },
+      "width": {
+        "value": 1040,
+        "keyframes": []
+      },
+      "height": {
+        "value": 420,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "isDraggingInTimeline": false,
+      "chartType": "bar",
+      "themeColor": "#3b82f6",
+      "data": {
+        "series": [
+          {
+            "key": "seriesA",
+            "label": "Series A"
+          },
+          {
+            "key": "seriesB",
+            "label": "Series B"
+          }
+        ],
+        "rows": [
+          {
+            "label": "Jan",
+            "values": {
+              "seriesA": 42,
+              "seriesB": 35
+            }
+          },
+          {
+            "label": "Feb",
+            "values": {
+              "seriesA": 58,
+              "seriesB": 46
+            }
+          },
+          {
+            "label": "Mar",
+            "values": {
+              "seriesA": 51,
+              "seriesB": 63
+            }
+          },
+          {
+            "label": "Apr",
+            "values": {
+              "seriesA": 76,
+              "seriesB": 69
+            }
+          },
+          {
+            "label": "May",
+            "values": {
+              "seriesA": 90,
+              "seriesB": 82
+            }
+          }
+        ]
+      },
+      "animationDurationTicks": 192000,
+      "keepAspectRatio": false,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      }
+    },
+    "item-chart-pie": {
+      "id": "item-chart-pie",
+      "type": "chart",
+      "startTicks": 1120000,
+      "durationTicks": 560000,
+      "top": {
+        "value": 120,
+        "keyframes": []
+      },
+      "left": {
+        "value": 320,
+        "keyframes": []
+      },
+      "width": {
+        "value": 640,
+        "keyframes": []
+      },
+      "height": {
+        "value": 480,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "isDraggingInTimeline": false,
+      "chartType": "pie",
+      "themeColor": "#3b82f6",
+      "data": {
+        "slices": [
+          {
+            "label": "Desktop",
+            "value": 46
+          },
+          {
+            "label": "Mobile",
+            "value": 34
+          },
+          {
+            "label": "Tablet",
+            "value": 20
+          }
+        ]
+      },
+      "animationDurationTicks": 192000,
+      "keepAspectRatio": false,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "animations": {
+        "in": {
+          "type": "zoom-in",
+          "durationTicks": 80000,
+          "easing": "ease-out"
+        }
+      }
+    },
+    "item-title": {
+      "id": "item-title",
+      "type": "text",
+      "startTicks": 0,
+      "durationTicks": 1680000,
+      "top": {
+        "value": 36,
+        "keyframes": []
+      },
+      "left": {
+        "value": 80,
+        "keyframes": []
+      },
+      "width": {
+        "value": 760,
+        "keyframes": []
+      },
+      "height": {
+        "value": 90,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "isDraggingInTimeline": false,
+      "text": "Chart Showcase",
+      "color": "#ffffff",
+      "align": "left",
+      "fontFamily": "TikTok Sans",
+      "fontStyle": {
+        "variant": "normal",
+        "weight": "700"
+      },
+      "fontSize": 60,
+      "lineHeight": 1.1,
+      "letterSpacing": 0,
+      "resizeOnEdit": true,
+      "direction": "ltr",
+      "strokeWidth": 0,
+      "strokeColor": "#000000",
+      "background": null,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      }
+    },
+    "item-note-line": {
+      "id": "item-note-line",
+      "type": "text",
+      "startTicks": 0,
+      "durationTicks": 560000,
+      "top": {
+        "value": 602,
+        "keyframes": []
+      },
+      "left": {
+        "value": 80,
+        "keyframes": []
+      },
+      "width": {
+        "value": 820,
+        "keyframes": []
+      },
+      "height": {
+        "value": 70,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "isDraggingInTimeline": false,
+      "text": "Use line charts for trend movement across time.",
+      "color": "#cbd5e1",
+      "align": "left",
+      "fontFamily": "TikTok Sans",
+      "fontStyle": {
+        "variant": "normal",
+        "weight": "500"
+      },
+      "fontSize": 24,
+      "lineHeight": 1.1,
+      "letterSpacing": 0,
+      "resizeOnEdit": true,
+      "direction": "ltr",
+      "strokeWidth": 0,
+      "strokeColor": "#000000",
+      "background": null,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      }
+    },
+    "item-note-bar": {
+      "id": "item-note-bar",
+      "type": "text",
+      "startTicks": 560000,
+      "durationTicks": 560000,
+      "top": {
+        "value": 602,
+        "keyframes": []
+      },
+      "left": {
+        "value": 80,
+        "keyframes": []
+      },
+      "width": {
+        "value": 760,
+        "keyframes": []
+      },
+      "height": {
+        "value": 70,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "isDraggingInTimeline": false,
+      "text": "Use bar charts for side-by-side comparison.",
+      "color": "#cbd5e1",
+      "align": "left",
+      "fontFamily": "TikTok Sans",
+      "fontStyle": {
+        "variant": "normal",
+        "weight": "500"
+      },
+      "fontSize": 24,
+      "lineHeight": 1.1,
+      "letterSpacing": 0,
+      "resizeOnEdit": true,
+      "direction": "ltr",
+      "strokeWidth": 0,
+      "strokeColor": "#000000",
+      "background": null,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      }
+    },
+    "item-note-pie": {
+      "id": "item-note-pie",
+      "type": "text",
+      "startTicks": 1120000,
+      "durationTicks": 560000,
+      "top": {
+        "value": 602,
+        "keyframes": []
+      },
+      "left": {
+        "value": 80,
+        "keyframes": []
+      },
+      "width": {
+        "value": 780,
+        "keyframes": []
+      },
+      "height": {
+        "value": 70,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "isDraggingInTimeline": false,
+      "text": "Use pie charts for share-of-total storytelling.",
+      "color": "#cbd5e1",
+      "align": "left",
+      "fontFamily": "TikTok Sans",
+      "fontStyle": {
+        "variant": "normal",
+        "weight": "500"
+      },
+      "fontSize": 24,
+      "lineHeight": 1.1,
+      "letterSpacing": 0,
+      "resizeOnEdit": true,
+      "direction": "ltr",
+      "strokeWidth": 0,
+      "strokeColor": "#000000",
+      "background": null,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      }
+    },
+    "item-illustration": {
+      "id": "item-illustration",
+      "type": "illustration",
+      "startTicks": 0,
+      "durationTicks": 1680000,
+      "top": {
+        "value": 28,
+        "keyframes": []
+      },
+      "left": {
+        "value": 1040,
+        "keyframes": []
+      },
+      "width": {
+        "value": 160,
+        "keyframes": []
+      },
+      "height": {
+        "value": 160,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "isDraggingInTimeline": false,
+      "illustrationName": "IGrowthChart",
+      "color": "#38bdf8",
+      "keepAspectRatio": true,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      }
+    },
+    "item-filter-bar": {
+      "id": "item-filter-bar",
+      "type": "filter",
+      "filterType": "verdant-glow",
+      "intensity": 1,
+      "startTicks": 560000,
+      "durationTicks": 560000,
+      "isDraggingInTimeline": false,
+      "params": {
+        "blend": 0.75
+      }
+    }
+  },
+  "transitions": {
+    "transition-line-bar": {
+      "id": "transition-line-bar",
+      "trackId": "track-charts",
+      "fromClipId": "item-chart-line",
+      "toClipId": "item-chart-bar",
+      "type": "slide",
+      "durationTicks": 64000,
+      "easing": "ease-in-out",
+      "params": {
+        "direction": "from-left"
+      }
+    },
+    "transition-bar-pie": {
+      "id": "transition-bar-pie",
+      "trackId": "track-charts",
+      "fromClipId": "item-chart-bar",
+      "toClipId": "item-chart-pie",
+      "type": "iris",
+      "durationTicks": 64000,
+      "easing": "ease-in-out"
+    }
+  },
+  "globalBackground": {
+    "type": "color",
+    "color": "#0f172a",
+    "gradient": "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)"
+  }
+}

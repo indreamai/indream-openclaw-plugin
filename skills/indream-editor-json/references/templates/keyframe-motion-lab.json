@@ -1,0 +1,362 @@
+{
+  "compositionWidth": 1280,
+  "compositionHeight": 720,
+  "timebaseTicksPerSecond": 240000,
+  "outputRatio": "16:9",
+  "tracks": [
+    {
+      "id": "track-background",
+      "hidden": false,
+      "muted": false,
+      "items": [
+        "item-bg"
+      ]
+    },
+    {
+      "id": "track-panels",
+      "hidden": false,
+      "muted": false,
+      "items": [
+        "item-panel",
+        "item-badge"
+      ]
+    },
+    {
+      "id": "track-copy",
+      "hidden": false,
+      "muted": false,
+      "items": [
+        "item-headline",
+        "item-subtext"
+      ]
+    },
+    {
+      "id": "track-fx",
+      "hidden": false,
+      "muted": false,
+      "items": [
+        "item-effect",
+        "item-filter"
+      ]
+    }
+  ],
+  "assets": {},
+  "items": {
+    "item-bg": {
+      "id": "item-bg",
+      "type": "solid",
+      "startTicks": 0,
+      "durationTicks": 960000,
+      "top": {
+        "value": 0,
+        "keyframes": []
+      },
+      "left": {
+        "value": 0,
+        "keyframes": []
+      },
+      "width": {
+        "value": 1280,
+        "keyframes": []
+      },
+      "height": {
+        "value": 720,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": [
+          {
+            "timeTicks": 0,
+            "value": 0.55
+          }
+        ]
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": [
+          {
+            "timeTicks": 0,
+            "value": 0.55
+          }
+        ]
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "isDraggingInTimeline": false,
+      "color": "#111827",
+      "shape": "rectangle",
+      "keepAspectRatio": false,
+      "borderRadius": {
+        "value": 0,
+        "keyframes": []
+      },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      }
+    },
+    "item-panel": {
+      "id": "item-panel",
+      "type": "solid",
+      "startTicks": 0,
+      "durationTicks": 960000,
+      "top": {
+        "value": 110,
+        "keyframes": []
+      },
+      "left": {
+        "value": 120,
+        "keyframes": [
+          {
+            "timeTicks": 0,
+            "value": -260
+          }
+        ]
+      },
+      "width": {
+        "value": 430,
+        "keyframes": []
+      },
+      "height": {
+        "value": 230,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "isDraggingInTimeline": false,
+      "color": "#2563eb",
+      "shape": "rectangle",
+      "keepAspectRatio": false,
+      "borderRadius": {
+        "value": 32,
+        "keyframes": []
+      },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "animations": {
+        "out": {
+          "type": "fade",
+          "durationTicks": 80000,
+          "easing": "ease-in"
+        }
+      }
+    },
+    "item-badge": {
+      "id": "item-badge",
+      "type": "solid",
+      "startTicks": 0,
+      "durationTicks": 960000,
+      "top": {
+        "value": 104,
+        "keyframes": [
+          {
+            "timeTicks": 0,
+            "value": 24
+          }
+        ]
+      },
+      "left": {
+        "value": 910,
+        "keyframes": []
+      },
+      "width": {
+        "value": 180,
+        "keyframes": []
+      },
+      "height": {
+        "value": 180,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "isDraggingInTimeline": false,
+      "color": "#f97316",
+      "shape": "circle",
+      "keepAspectRatio": true,
+      "borderRadius": {
+        "value": 0,
+        "keyframes": []
+      },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      }
+    },
+    "item-headline": {
+      "id": "item-headline",
+      "type": "text",
+      "startTicks": 0,
+      "durationTicks": 960000,
+      "top": {
+        "value": 390,
+        "keyframes": []
+      },
+      "left": {
+        "value": 120,
+        "keyframes": [
+          {
+            "timeTicks": 0,
+            "value": 40
+          }
+        ]
+      },
+      "width": {
+        "value": 1040,
+        "keyframes": []
+      },
+      "height": {
+        "value": 100,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": [
+          {
+            "timeTicks": 0,
+            "value": 0
+          }
+        ]
+      },
+      "isDraggingInTimeline": false,
+      "text": "Single-Keyframe Motion Lab",
+      "color": "#ffffff",
+      "align": "left",
+      "fontFamily": "TikTok Sans",
+      "fontStyle": {
+        "variant": "normal",
+        "weight": "700"
+      },
+      "fontSize": 56,
+      "lineHeight": 1.1,
+      "letterSpacing": 0,
+      "resizeOnEdit": true,
+      "direction": "ltr",
+      "strokeWidth": 0,
+      "strokeColor": "#000000",
+      "background": null,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      }
+    },
+    "item-subtext": {
+      "id": "item-subtext",
+      "type": "text",
+      "startTicks": 64000,
+      "durationTicks": 832000,
+      "top": {
+        "value": 500,
+        "keyframes": []
+      },
+      "left": {
+        "value": 120,
+        "keyframes": []
+      },
+      "width": {
+        "value": 930,
+        "keyframes": []
+      },
+      "height": {
+        "value": 90,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "isDraggingInTimeline": false,
+      "text": "Base values define the resting state. One keyframe can define the entry state.",
+      "color": "#cbd5e1",
+      "align": "left",
+      "fontFamily": "TikTok Sans",
+      "fontStyle": {
+        "variant": "normal",
+        "weight": "500"
+      },
+      "fontSize": 24,
+      "lineHeight": 1.1,
+      "letterSpacing": 0,
+      "resizeOnEdit": true,
+      "direction": "ltr",
+      "strokeWidth": 0,
+      "strokeColor": "#000000",
+      "background": {
+        "color": "#00000066",
+        "horizontalPadding": 16,
+        "borderRadius": 18
+      },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      }
+    },
+    "item-effect": {
+      "id": "item-effect",
+      "type": "effect",
+      "effectType": "blur",
+      "intensity": 1,
+      "startTicks": 288000,
+      "durationTicks": 144000,
+      "isDraggingInTimeline": false
+    },
+    "item-filter": {
+      "id": "item-filter",
+      "type": "filter",
+      "filterType": "absolute-red",
+      "intensity": 1,
+      "startTicks": 480000,
+      "durationTicks": 288000,
+      "isDraggingInTimeline": false,
+      "params": {
+        "blend": 0.86
+      }
+    }
+  },
+  "transitions": {},
+  "globalBackground": {
+    "type": "color",
+    "color": "#111827",
+    "gradient": "linear-gradient(135deg, #111827 0%, #1f2937 100%)"
+  }
+}

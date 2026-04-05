@@ -1,0 +1,36 @@
+{
+  "compositionWidth": 1920,
+  "compositionHeight": 1080,
+  "timebaseTicksPerSecond": 240000,
+  "tracks": [
+    {
+      "id": "track-1",
+      "hidden": false,
+      "muted": false,
+      "items": ["item-solid-1"]
+    }
+  ],
+  "assets": {},
+  "items": {
+    "item-solid-1": {
+      "id": "item-solid-1",
+      "type": "solid",
+      "color": "#111827",
+      "shape": "rectangle",
+      "startTicks": 0,
+      "durationTicks": 240000,
+      "top": { "value": 0, "keyframes": [] },
+      "left": { "value": 0, "keyframes": [] },
+      "width": { "value": 1920, "keyframes": [] },
+      "height": { "value": 1080, "keyframes": [] },
+      "scaleX": { "value": 1, "keyframes": [] },
+      "scaleY": { "value": 1, "keyframes": [] },
+      "opacity": { "value": 1, "keyframes": [] },
+      "isDraggingInTimeline": false,
+      "borderRadius": { "value": 0, "keyframes": [] },
+      "rotation": { "value": 0, "keyframes": [] },
+      "keepAspectRatio": false
+    }
+  },
+  "transitions": {}
+}

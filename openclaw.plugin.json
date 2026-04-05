@@ -1,0 +1,98 @@
+{
+  "id": "indream",
+  "name": "Indream",
+  "description": "Indream video editor API tools and skills for OpenClaw",
+  "version": "0.1.0",
+  "skills": [
+    "./skills"
+  ],
+  "contracts": {
+    "tools": [
+      "indream_editor_capabilities",
+      "indream_editor_validate",
+      "indream_projects_list",
+      "indream_projects_get",
+      "indream_projects_list_assets",
+      "indream_assets_get",
+      "indream_exports_get",
+      "indream_exports_list",
+      "indream_exports_wait",
+      "indream_projects_create",
+      "indream_projects_update",
+      "indream_projects_sync",
+      "indream_projects_delete",
+      "indream_projects_add_asset",
+      "indream_projects_remove_asset",
+      "indream_assets_upload",
+      "indream_assets_delete",
+      "indream_exports_create",
+      "indream_projects_create_export"
+    ]
+  },
+  "uiHints": {
+    "apiKey": {
+      "label": "Indream API key",
+      "help": "Used for all requests to the Indream Open API.",
+      "placeholder": "indream_...",
+      "sensitive": true
+    },
+    "baseURL": {
+      "label": "Base URL",
+      "placeholder": "https://api.indream.ai"
+    },
+    "timeoutMs": {
+      "label": "Timeout (ms)",
+      "advanced": true
+    },
+    "pollIntervalMs": {
+      "label": "Poll interval (ms)",
+      "advanced": true
+    },
+    "uploads": {
+      "label": "Upload controls",
+      "advanced": true
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "apiKey": {
+        "type": "string",
+        "minLength": 1
+      },
+      "baseURL": {
+        "type": "string",
+        "default": "https://api.indream.ai"
+      },
+      "timeoutMs": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 60000
+      },
+      "pollIntervalMs": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 2000
+      },
+      "uploads": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "allowLocalPaths": {
+            "type": "boolean",
+            "default": true
+          },
+          "allowRemoteUrls": {
+            "type": "boolean",
+            "default": true
+          }
+        },
+        "default": {
+          "allowLocalPaths": true,
+          "allowRemoteUrls": true
+        }
+      }
+    }
+  }
+}
