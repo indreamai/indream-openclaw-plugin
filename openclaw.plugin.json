@@ -2,7 +2,7 @@
   "id": "indream",
   "name": "Indream",
   "description": "Indream video editor API tools and skills for OpenClaw",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "skills": [
     "./skills"
   ],
