@@ -80,23 +80,39 @@ Required fields:
 - `strokeColor`
 - `direction`
 - `pageDurationInMilliseconds`
-- `captionStartInSeconds`
 - `maxLines`
+- `contentStartOffsetMs`
 - `source`
 - `captionGroupId`
 - `background`
 - full base geometry fields
 
+Production-safe authoring fields:
+
+- `animations`
+- Use `animations: {}` when no clip-level container motion is needed.
+
 Important subtitle rules:
 
 - `source` must be one of `manual`, `auto`, or `upload`.
-- `captionGroupId` can be `null`.
+- `auto` defaults to word-timing behavior.
+- `manual` and `upload` default to line-timing behavior unless the linked caption asset explicitly says otherwise.
+- `captionGroupId` can be `null` for a standalone subtitle item.
+- Reuse one stable non-null `captionGroupId` when multiple `captions` items belong to the same subtitle sequence.
 - `background` can be `null` or an object with:
   - `color`
   - `horizontalPadding`
   - `borderRadius`
-- `captionAnimations` is not allowed when the linked caption asset uses `timingGranularity: "word"`.
+- `animations` affects the outer subtitle container.
+- `captionAnimations` affects the inner text rendering and grapheme-level text behavior.
+- `captionAnimations` is optional and is not allowed when the linked caption asset uses `timingGranularity: "word"`.
   If the user wants subtitle animation, prefer `timingGranularity: "line"` for the caption asset.
+- `pageDurationInMilliseconds` groups word-timed captions into readable subtitle pages when the linked caption asset uses `timingGranularity: "word"`.
+- `highlightColor` is mainly useful for word-timed playback where the active word or token should stand out.
+- `contentStartOffsetMs` is required and must be a non-negative number.
+  It represents the lead-in between the caption item start and the caption content local zero point.
+- Subtitle clip timing is controlled by the item timeline window together with `contentStartOffsetMs`.
+  Do not invent any additional item-level playback offset fields.
 - For production authoring, start with one short `captionAnimations.in` on `captions` items and add more layers only after a real export probe.
   Dense combinations can validate but still be a worse default for renderer stability.
 
@@ -104,10 +120,12 @@ Practical guidance:
 
 - Use `captions` for real subtitle timing.
 - Use `text` for static or manually timed overlay copy.
-- Use `highlightColor` only when the subtitle style calls for word or phrase emphasis.
-- Keep `pageDurationInMilliseconds` aligned with the intended subtitle pagination behavior.
-- Make sure the `captions` item duration fully covers the subtitle asset timing window after applying `captionStartInSeconds`.
-  A validation pass may still succeed when the subtitle data slightly overruns the clip, but real export can fail at render time.
+- Use `highlightColor` primarily when the subtitle style calls for active word or phrase emphasis.
+- Keep `pageDurationInMilliseconds` aligned with the intended subtitle pagination behavior, especially for word-timed captions.
+- Keep `assets[*].captions[].startMs/endMs/timestampMs` local to the owning `captions` item start time. If one subtitle sequence spans multiple items, each item should use caption timing rebased to its own local zero point.
+- Use `contentStartOffsetMs` when the subtitle clip should appear slightly earlier than the first timed word or line.
+  Left-edge extension should increase this lead-in instead of rewriting caption token timing.
+- Make sure the `captions` item duration fully covers the intended visible subtitle window. It is valid for the clip to remain active after the last word when the subtitle item should stay on screen slightly longer than the timed text.
 
 ## Caption asset and captions item pairing
 
@@ -118,6 +136,64 @@ The clean subtitle workflow is:
 3. style the `captions` item for readability and animation
 
 This is better than manually creating one text item per subtitle line unless the user explicitly wants handcrafted timing.
+
+## Word-timed caption asset fragment
+
+Relevant fragment only.
+For word-timed subtitles, `assets[*].captions[]` is a flat list of words or tokens.
+Each caption time is local to the owning `captions` item, not an absolute composition timestamp.
+Do not store grouped `cues` objects inside the editor asset.
+Each caption entry should use this leaf structure:
+
+- `text` is required
+- `startMs` is required
+- `endMs` is required and must be greater than `startMs`
+- `timestampMs` is optional and may be `null`
+- `confidence` is optional and may be `null`
+
+```json
+{
+  "assets": {
+    "asset-caption-words": {
+      "id": "asset-caption-words",
+      "type": "caption",
+      "filename": "captions.json",
+      "size": 512,
+      "remoteUrl": null,
+      "remoteKey": null,
+      "mimeType": "application/json",
+      "timingGranularity": "word",
+      "captions": [
+        {
+          "text": "Hello ",
+          "startMs": 0,
+          "endMs": 420,
+          "timestampMs": 0,
+          "confidence": 0.98
+        },
+        {
+          "text": "world",
+          "startMs": 420,
+          "endMs": 900,
+          "timestampMs": 420,
+          "confidence": 0.96
+        }
+      ]
+    }
+  },
+  "items": {
+    "item-caption-words": {
+      "id": "item-caption-words",
+      "type": "captions",
+      "assetId": "asset-caption-words",
+      "source": "auto",
+      "pageDurationInMilliseconds": 1200,
+      "contentStartOffsetMs": 0,
+      "animations": {}
+    }
+  }
+}
+```
 
 ## Text-template item
 
@@ -134,9 +210,11 @@ Required fields:
 
 Notes:
 
-- `nodes` must contain at least two entries.
-- Each node must have a `type` of `image` or `text`.
-- The schema keeps nodes intentionally flexible, but that does not mean you should invent arbitrary template contracts.
+- `nodes` must contain exactly 1 `image` node.
+- `nodes` must contain 1 to 3 `text` nodes.
+- No other node types are valid here.
+- `image` nodes should use the stable fields `id`, `type`, `imageType`, `imageComponentId`, `imageLottieJson`, `x`, `y`, `width`, `height`, and `opacity`.
+- `text` nodes should use the stable fields `id`, `type`, `x`, `y`, `width`, `height`, `text`, `color`, `align`, `fontFamily`, `fontStyle`, `fontSize`, `lineHeight`, `letterSpacing`, `direction`, `strokeWidth`, `strokeColor`, and `background`.
 
 When to avoid `text-template`:
 
@@ -196,6 +274,7 @@ Use:
   "strokeWidth": 0,
   "strokeColor": "#000000",
   "background": null,
+  "animations": {},
   "rotation": { "value": 0, "keyframes": [] },
   "startTicks": 0,
   "durationTicks": 120,

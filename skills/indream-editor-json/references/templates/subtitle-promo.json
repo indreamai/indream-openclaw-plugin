@@ -1,96 +1,426 @@
 {
+  "timebaseTicksPerSecond": 240000,
   "compositionWidth": 1080,
   "compositionHeight": 1920,
-  "timebaseTicksPerSecond": 240000,
   "outputRatio": "9:16",
+  "globalBackground": {
+    "type": "none"
+  },
+  "brandRuntime": {
+    "logoX": 50,
+    "logoY": 50,
+    "brandId": null,
+    "managedItemIds": [],
+    "overlayTrackId": null,
+    "managedAssetIds": [],
+    "underlayTrackId": null,
+    "introShiftInFrames": 0
+  },
   "tracks": [
     {
-      "id": "track-media",
-      "hidden": false,
-      "muted": false,
+      "id": "U8Zj",
       "items": [
-        "item-bg-image"
-      ]
+        "v2xT",
+        "2aJO",
+        "Gs01",
+        "uORc",
+        "mj7S",
+        "u4Mi",
+        "kzD3",
+        "Ql38"
+      ],
+      "hidden": false,
+      "muted": false
     },
     {
-      "id": "track-copy",
-      "hidden": false,
-      "muted": false,
+      "id": "3L1T",
       "items": [
-        "item-title",
-        "item-cta"
-      ]
-    },
-    {
-      "id": "track-captions",
+        "Y34a"
+      ],
       "hidden": false,
-      "muted": false,
-      "items": [
-        "item-captions"
-      ]
+      "muted": false
     }
   ],
   "assets": {
-    "asset-bg-image": {
-      "id": "asset-bg-image",
-      "type": "image",
-      "filename": "vertical-bg.png",
-      "size": 0,
-      "remoteUrl": "https://r.indream.ai/system/presets/154c197a-92c3-4bef-8560-4b9b70688a57.png",
-      "remoteKey": null,
-      "mimeType": "image/png",
-      "width": 1024,
-      "height": 1024
+    "ro8d": {
+      "id": "ro8d",
+      "type": "video",
+      "durationInSeconds": 15.100000000000001,
+      "hasAudioTrack": false,
+      "filename": "bd76326.mp4",
+      "remoteUrl": "https://r.indream.ai/video-1.mp4",
+      "remoteKey": "bd76326.mp4",
+      "size": 8670610,
+      "mimeType": "video/mp4",
+      "width": 1056,
+      "height": 1920
     },
-    "asset-captions": {
-      "id": "asset-captions",
+    "pcP7": {
+      "id": "pcP7",
       "type": "caption",
-      "filename": "asset-captions.json",
-      "size": 0,
-      "remoteUrl": null,
-      "remoteKey": null,
-      "mimeType": "application/json",
-      "timingGranularity": "line",
       "captions": [
         {
-          "text": "Build faster scenes.",
+          "text": "This",
           "startMs": 0,
-          "endMs": 900
+          "endMs": 340.0000035762787,
+          "timestampMs": 170.00000178813934,
+          "confidence": null
         },
         {
-          "text": "Validate before export.",
-          "startMs": 900,
-          "endMs": 2100
+          "text": " is",
+          "startMs": 340.0000035762787,
+          "endMs": 639.9999856948853,
+          "timestampMs": 489.99999463558197,
+          "confidence": null
         },
         {
-          "text": "Keep subtitle timing readable.",
-          "startMs": 2100,
-          "endMs": 3300
+          "text": " the",
+          "startMs": 639.9999856948853,
+          "endMs": 1159.999966621399,
+          "timestampMs": 899.9999761581421,
+          "confidence": null
         },
         {
-          "text": "Ship a clean final render.",
-          "startMs": 3300,
-          "endMs": 4500
+          "text": " Velvet",
+          "startMs": 1159.999966621399,
+          "endMs": 1189.999966621399,
+          "timestampMs": 1169.9999570846558,
+          "confidence": null
+        },
+        {
+          "text": " Rouge",
+          "startMs": 1189.999966621399,
+          "endMs": 1600.000023841858,
+          "timestampMs": 1389.9999856948853,
+          "confidence": null
+        },
+        {
+          "text": " Lipstick,",
+          "startMs": 1600.000023841858,
+          "endMs": 2200.000047683716,
+          "timestampMs": 1900.0000357627869,
+          "confidence": null
         }
-      ]
+      ],
+      "timingGranularity": "word",
+      "filename": "captions.srt",
+      "remoteUrl": null,
+      "remoteKey": null,
+      "size": 720,
+      "mimeType": "application/json"
+    },
+    "KcWz": {
+      "id": "KcWz",
+      "type": "caption",
+      "captions": [
+        {
+          "text": " a",
+          "startMs": 0,
+          "endMs": 279.9999713897705,
+          "timestampMs": 139.99998569488525,
+          "confidence": null
+        },
+        {
+          "text": " saturated",
+          "startMs": 279.9999713897705,
+          "endMs": 639.9998664855957,
+          "timestampMs": 459.9999189376831,
+          "confidence": null
+        },
+        {
+          "text": " crimson",
+          "startMs": 639.9998664855957,
+          "endMs": 1119.999885559082,
+          "timestampMs": 879.9998760223389,
+          "confidence": null
+        },
+        {
+          "text": " with",
+          "startMs": 1119.999885559082,
+          "endMs": 1379.9998760223389,
+          "timestampMs": 1249.9998807907104,
+          "confidence": null
+        },
+        {
+          "text": " a",
+          "startMs": 1379.9998760223389,
+          "endMs": 1980.0000190734863,
+          "timestampMs": 1679.9999475479126,
+          "confidence": null
+        },
+        {
+          "text": " plush",
+          "startMs": 1980.0000190734863,
+          "endMs": 2010.0000190734863,
+          "timestampMs": 1980.0000190734863,
+          "confidence": null
+        },
+        {
+          "text": " velvet",
+          "startMs": 2010.0000190734863,
+          "endMs": 2440.000057220459,
+          "timestampMs": 2210.0000381469727,
+          "confidence": null
+        },
+        {
+          "text": " finish.",
+          "startMs": 2440.000057220459,
+          "endMs": 2920.0000762939453,
+          "timestampMs": 2680.000066757202,
+          "confidence": null
+        }
+      ],
+      "timingGranularity": "word",
+      "filename": "captions.srt",
+      "remoteUrl": null,
+      "remoteKey": null,
+      "size": 973,
+      "mimeType": "application/json"
+    },
+    "4NW9": {
+      "id": "4NW9",
+      "type": "caption",
+      "captions": [
+        {
+          "text": " One",
+          "startMs": 0,
+          "endMs": 200.00028610229492,
+          "timestampMs": 100.00014305114746,
+          "confidence": null
+        },
+        {
+          "text": " stroke",
+          "startMs": 200.00028610229492,
+          "endMs": 560.0004196166992,
+          "timestampMs": 380.00035285949707,
+          "confidence": null
+        },
+        {
+          "text": " delivers",
+          "startMs": 560.0004196166992,
+          "endMs": 980.0000190734863,
+          "timestampMs": 770.0002193450928,
+          "confidence": null
+        },
+        {
+          "text": " bold,",
+          "startMs": 980.0000190734863,
+          "endMs": 1600.0003814697266,
+          "timestampMs": 1290.0002002716064,
+          "confidence": null
+        }
+      ],
+      "timingGranularity": "word",
+      "filename": "captions.srt",
+      "remoteUrl": null,
+      "remoteKey": null,
+      "size": 481,
+      "mimeType": "application/json"
+    },
+    "Rv6u": {
+      "id": "Rv6u",
+      "type": "caption",
+      "captions": [
+        {
+          "text": " even",
+          "startMs": 0,
+          "endMs": 30,
+          "timestampMs": 0,
+          "confidence": null
+        },
+        {
+          "text": " color.",
+          "startMs": 30,
+          "endMs": 380.00011444091797,
+          "timestampMs": 190.00005722045898,
+          "confidence": null
+        }
+      ],
+      "timingGranularity": "word",
+      "filename": "captions.srt",
+      "remoteUrl": null,
+      "remoteKey": null,
+      "size": 185,
+      "mimeType": "application/json"
+    },
+    "5RuQ": {
+      "id": "5RuQ",
+      "type": "caption",
+      "captions": [
+        {
+          "text": " It",
+          "startMs": 0,
+          "endMs": 30,
+          "timestampMs": 0,
+          "confidence": null
+        },
+        {
+          "text": " glides",
+          "startMs": 30,
+          "endMs": 299.9992370605469,
+          "timestampMs": 149.99961853027344,
+          "confidence": null
+        },
+        {
+          "text": " on",
+          "startMs": 299.9992370605469,
+          "endMs": 739.9997711181641,
+          "timestampMs": 519.9995040893555,
+          "confidence": null
+        },
+        {
+          "text": " weightlessly",
+          "startMs": 739.9997711181641,
+          "endMs": 1039.9999618530273,
+          "timestampMs": 889.9998664855957,
+          "confidence": null
+        },
+        {
+          "text": " like",
+          "startMs": 1039.9999618530273,
+          "endMs": 1539.9999618530273,
+          "timestampMs": 1289.9999618530273,
+          "confidence": null
+        },
+        {
+          "text": " silk,",
+          "startMs": 1539.9999618530273,
+          "endMs": 1880.000114440918,
+          "timestampMs": 1710.0000381469727,
+          "confidence": null
+        }
+      ],
+      "timingGranularity": "word",
+      "filename": "captions.srt",
+      "remoteUrl": null,
+      "remoteKey": null,
+      "size": 679,
+      "mimeType": "application/json"
+    },
+    "ckkt": {
+      "id": "ckkt",
+      "type": "caption",
+      "captions": [
+        {
+          "text": " and",
+          "startMs": 0,
+          "endMs": 39.999961853027344,
+          "timestampMs": 19.999980926513672,
+          "confidence": null
+        },
+        {
+          "text": " it",
+          "startMs": 39.999961853027344,
+          "endMs": 460.00003814697266,
+          "timestampMs": 250,
+          "confidence": null
+        },
+        {
+          "text": " stays",
+          "startMs": 460.00003814697266,
+          "endMs": 490.00003814697266,
+          "timestampMs": 460.00003814697266,
+          "confidence": null
+        },
+        {
+          "text": " comfortable",
+          "startMs": 490.00003814697266,
+          "endMs": 920.0000762939453,
+          "timestampMs": 690.000057220459,
+          "confidence": null
+        },
+        {
+          "text": " and",
+          "startMs": 920.0000762939453,
+          "endMs": 1679.9993515014648,
+          "timestampMs": 1299.999713897705,
+          "confidence": null
+        },
+        {
+          "text": " flawless",
+          "startMs": 1679.9993515014648,
+          "endMs": 1709.9993515014648,
+          "timestampMs": 1679.9993515014648,
+          "confidence": null
+        },
+        {
+          "text": " all",
+          "startMs": 1709.9993515014648,
+          "endMs": 2139.9993896484375,
+          "timestampMs": 1909.9993705749512,
+          "confidence": null
+        },
+        {
+          "text": " day.",
+          "startMs": 2139.9993896484375,
+          "endMs": 2420.0000762939453,
+          "timestampMs": 2279.9997329711914,
+          "confidence": null
+        }
+      ],
+      "timingGranularity": "word",
+      "filename": "captions.srt",
+      "remoteUrl": null,
+      "remoteKey": null,
+      "size": 963,
+      "mimeType": "application/json"
+    },
+    "k4i7": {
+      "id": "k4i7",
+      "type": "caption",
+      "captions": [
+        {
+          "text": " Bold,",
+          "startMs": 0,
+          "endMs": 30,
+          "timestampMs": 0,
+          "confidence": null
+        }
+      ],
+      "timingGranularity": "word",
+      "filename": "captions.srt",
+      "remoteUrl": null,
+      "remoteKey": null,
+      "size": 76,
+      "mimeType": "application/json"
+    },
+    "Iolg": {
+      "id": "Iolg",
+      "type": "caption",
+      "captions": [
+        {
+          "text": " plush.",
+          "startMs": 0,
+          "endMs": 99.99942779541016,
+          "timestampMs": 49.99971389770508,
+          "confidence": null
+        }
+      ],
+      "timingGranularity": "word",
+      "filename": "captions.srt",
+      "remoteUrl": null,
+      "remoteKey": null,
+      "size": 108,
+      "mimeType": "application/json"
     }
   },
   "items": {
-    "item-bg-image": {
-      "id": "item-bg-image",
-      "type": "image",
-      "startTicks": 0,
-      "durationTicks": 1200000,
+    "Y34a": {
+      "id": "Y34a",
+      "videoStartFromInSeconds": 0,
+      "type": "video",
+      "assetId": "ro8d",
+      "isDraggingInTimeline": false,
       "top": {
         "value": 0,
         "keyframes": []
       },
       "left": {
-        "value": 0,
+        "value": 12,
         "keyframes": []
       },
       "width": {
-        "value": 1080,
+        "value": 1056,
         "keyframes": []
       },
       "height": {
@@ -109,9 +439,6 @@
         "value": 1,
         "keyframes": []
       },
-      "isDraggingInTimeline": false,
-      "assetId": "asset-bg-image",
-      "keepAspectRatio": true,
       "borderRadius": {
         "value": 0,
         "keyframes": []
@@ -120,7 +447,15 @@
         "value": 0,
         "keyframes": []
       },
-      "cropLeft": {
+      "decibelAdjustment": {
+        "value": 0,
+        "keyframes": []
+      },
+      "playbackRate": 1,
+      "audioFadeInDurationInSeconds": 0,
+      "audioFadeOutDurationInSeconds": 0,
+      "keepAspectRatio": true,
+      "cropBottom": {
         "value": 0,
         "keyframes": []
       },
@@ -128,84 +463,23 @@
         "value": 0,
         "keyframes": []
       },
+      "cropLeft": {
+        "value": 0,
+        "keyframes": []
+      },
       "cropRight": {
         "value": 0,
         "keyframes": []
       },
-      "cropBottom": {
-        "value": 0,
-        "keyframes": []
-      }
-    },
-    "item-title": {
-      "id": "item-title",
-      "type": "text",
       "startTicks": 0,
-      "durationTicks": 336000,
-      "top": {
-        "value": 120,
-        "keyframes": []
-      },
-      "left": {
-        "value": 88,
-        "keyframes": []
-      },
-      "width": {
-        "value": 904,
-        "keyframes": []
-      },
-      "height": {
-        "value": 180,
-        "keyframes": []
-      },
-      "scaleX": {
-        "value": 1,
-        "keyframes": []
-      },
-      "scaleY": {
-        "value": 1,
-        "keyframes": []
-      },
-      "opacity": {
-        "value": 1,
-        "keyframes": []
-      },
-      "isDraggingInTimeline": false,
-      "text": "Subtitle Promo",
-      "color": "#ffffff",
-      "align": "center",
-      "fontFamily": "TikTok Sans",
-      "fontStyle": {
-        "variant": "normal",
-        "weight": "700"
-      },
-      "fontSize": 84,
-      "lineHeight": 1.1,
-      "letterSpacing": 0,
-      "resizeOnEdit": true,
-      "direction": "ltr",
-      "strokeWidth": 0,
-      "strokeColor": "#000000",
-      "background": null,
-      "rotation": {
-        "value": 0,
-        "keyframes": []
-      },
-      "animations": {
-        "in": {
-          "type": "slide-up",
-          "durationTicks": 80000,
-          "easing": "ease-out"
-        }
-      }
+      "durationTicks": 3624000
     },
-    "item-cta": {
-      "id": "item-cta",
-      "type": "text",
-      "startTicks": 816000,
-      "durationTicks": 384000,
+    "v2xT": {
+      "type": "captions",
+      "id": "v2xT",
+      "assetId": "pcP7",
       "top": {
-        "value": 1650,
+        "value": 1110,
         "keyframes": []
       },
       "left": {
@@ -217,7 +491,7 @@
         "keyframes": []
       },
       "height": {
-        "value": 110,
+        "value": 192,
         "keyframes": []
       },
       "scaleX": {
@@ -231,68 +505,11 @@
       "opacity": {
         "value": 1,
         "keyframes": []
-      },
-      "isDraggingInTimeline": false,
-      "text": "Use line-timed captions when subtitle animations are needed.",
-      "color": "#f8fafc",
-      "align": "center",
-      "fontFamily": "TikTok Sans",
-      "fontStyle": {
-        "variant": "normal",
-        "weight": "500"
-      },
-      "fontSize": 28,
-      "lineHeight": 1.1,
-      "letterSpacing": 0,
-      "resizeOnEdit": true,
-      "direction": "ltr",
-      "strokeWidth": 0,
-      "strokeColor": "#000000",
-      "background": {
-        "color": "#00000088",
-        "horizontalPadding": 20,
-        "borderRadius": 28
       },
       "rotation": {
         "value": 0,
         "keyframes": []
-      }
-    },
-    "item-captions": {
-      "id": "item-captions",
-      "type": "captions",
-      "startTicks": 96000,
-      "durationTicks": 1104000,
-      "top": {
-        "value": 1320,
-        "keyframes": []
       },
-      "left": {
-        "value": 120,
-        "keyframes": []
-      },
-      "width": {
-        "value": 840,
-        "keyframes": []
-      },
-      "height": {
-        "value": 220,
-        "keyframes": []
-      },
-      "scaleX": {
-        "value": 1,
-        "keyframes": []
-      },
-      "scaleY": {
-        "value": 1,
-        "keyframes": []
-      },
-      "opacity": {
-        "value": 1,
-        "keyframes": []
-      },
-      "isDraggingInTimeline": false,
-      "assetId": "asset-captions",
       "fontFamily": "TikTok Sans",
       "fontStyle": {
         "variant": "normal",
@@ -302,40 +519,450 @@
       "letterSpacing": 0,
       "fontSize": 80,
       "align": "center",
-      "color": "#ffffff",
+      "color": "#FFFFFF",
       "highlightColor": "#39E508",
+      "direction": "ltr",
+      "pageDurationInMilliseconds": 2201,
       "strokeWidth": 4,
       "strokeColor": "#000000",
-      "direction": "ltr",
-      "pageDurationInMilliseconds": 2000,
-      "captionStartInSeconds": 0,
       "maxLines": 2,
-      "source": "manual",
-      "captionGroupId": "caption-group-1",
+      "contentStartOffsetMs": 0,
+      "source": "auto",
+      "captionGroupId": "qFKU",
       "background": null,
+      "animations": {},
+      "isDraggingInTimeline": false,
+      "startTicks": 0,
+      "durationTicks": 536000
+    },
+    "2aJO": {
+      "type": "captions",
+      "id": "2aJO",
+      "assetId": "KcWz",
+      "top": {
+        "value": 1110,
+        "keyframes": []
+      },
+      "left": {
+        "value": 110,
+        "keyframes": []
+      },
+      "width": {
+        "value": 860,
+        "keyframes": []
+      },
+      "height": {
+        "value": 192,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
       "rotation": {
         "value": 0,
         "keyframes": []
       },
-      "animations": {
-        "in": {
-          "type": "fade",
-          "durationTicks": 48000,
-          "easing": "ease-out"
-        }
+      "fontFamily": "TikTok Sans",
+      "fontStyle": {
+        "variant": "normal",
+        "weight": "600"
       },
-      "captionAnimations": {
-        "in": {
-          "type": "converge",
-          "durationTicks": 48000
-        }
-      }
+      "lineHeight": 1.2,
+      "letterSpacing": 0,
+      "fontSize": 80,
+      "align": "center",
+      "color": "#FFFFFF",
+      "highlightColor": "#39E508",
+      "direction": "ltr",
+      "pageDurationInMilliseconds": 2921,
+      "strokeWidth": 4,
+      "strokeColor": "#000000",
+      "maxLines": 2,
+      "contentStartOffsetMs": 6.6667238871254995,
+      "source": "auto",
+      "captionGroupId": "qFKU",
+      "background": null,
+      "animations": {},
+      "isDraggingInTimeline": false,
+      "startTicks": 584000,
+      "durationTicks": 704000
+    },
+    "Gs01": {
+      "type": "captions",
+      "id": "Gs01",
+      "assetId": "4NW9",
+      "top": {
+        "value": 1110,
+        "keyframes": []
+      },
+      "left": {
+        "value": 110,
+        "keyframes": []
+      },
+      "width": {
+        "value": 860,
+        "keyframes": []
+      },
+      "height": {
+        "value": 192,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "fontFamily": "TikTok Sans",
+      "fontStyle": {
+        "variant": "normal",
+        "weight": "600"
+      },
+      "lineHeight": 1.2,
+      "letterSpacing": 0,
+      "fontSize": 80,
+      "align": "center",
+      "color": "#FFFFFF",
+      "highlightColor": "#39E508",
+      "direction": "ltr",
+      "pageDurationInMilliseconds": 1601,
+      "strokeWidth": 4,
+      "strokeColor": "#000000",
+      "maxLines": 2,
+      "contentStartOffsetMs": 33.33314259846975,
+      "source": "auto",
+      "captionGroupId": "qFKU",
+      "background": null,
+      "animations": {},
+      "isDraggingInTimeline": false,
+      "startTicks": 1360000,
+      "durationTicks": 400000
+    },
+    "uORc": {
+      "type": "captions",
+      "id": "uORc",
+      "assetId": "Rv6u",
+      "top": {
+        "value": 1110,
+        "keyframes": []
+      },
+      "left": {
+        "value": 110,
+        "keyframes": []
+      },
+      "width": {
+        "value": 860,
+        "keyframes": []
+      },
+      "height": {
+        "value": 192,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "fontFamily": "TikTok Sans",
+      "fontStyle": {
+        "variant": "normal",
+        "weight": "600"
+      },
+      "lineHeight": 1.2,
+      "letterSpacing": 0,
+      "fontSize": 80,
+      "align": "center",
+      "color": "#FFFFFF",
+      "highlightColor": "#39E508",
+      "direction": "ltr",
+      "pageDurationInMilliseconds": 381,
+      "strokeWidth": 4,
+      "strokeColor": "#000000",
+      "maxLines": 2,
+      "contentStartOffsetMs": 0.0001907348623717553,
+      "source": "auto",
+      "captionGroupId": "qFKU",
+      "background": null,
+      "animations": {},
+      "isDraggingInTimeline": false,
+      "startTicks": 1872000,
+      "durationTicks": 96000
+    },
+    "mj7S": {
+      "type": "captions",
+      "id": "mj7S",
+      "assetId": "5RuQ",
+      "top": {
+        "value": 1110,
+        "keyframes": []
+      },
+      "left": {
+        "value": 110,
+        "keyframes": []
+      },
+      "width": {
+        "value": 860,
+        "keyframes": []
+      },
+      "height": {
+        "value": 192,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "fontFamily": "TikTok Sans",
+      "fontStyle": {
+        "variant": "normal",
+        "weight": "600"
+      },
+      "lineHeight": 1.2,
+      "letterSpacing": 0,
+      "fontSize": 80,
+      "align": "center",
+      "color": "#FFFFFF",
+      "highlightColor": "#39E508",
+      "direction": "ltr",
+      "pageDurationInMilliseconds": 1881,
+      "strokeWidth": 4,
+      "strokeColor": "#000000",
+      "maxLines": 2,
+      "contentStartOffsetMs": 13.33363850911337,
+      "source": "auto",
+      "captionGroupId": "qFKU",
+      "background": null,
+      "animations": {},
+      "isDraggingInTimeline": false,
+      "startTicks": 2080000,
+      "durationTicks": 456000
+    },
+    "u4Mi": {
+      "type": "captions",
+      "id": "u4Mi",
+      "assetId": "ckkt",
+      "top": {
+        "value": 1110,
+        "keyframes": []
+      },
+      "left": {
+        "value": 110,
+        "keyframes": []
+      },
+      "width": {
+        "value": 860,
+        "keyframes": []
+      },
+      "height": {
+        "value": 192,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "fontFamily": "TikTok Sans",
+      "fontStyle": {
+        "variant": "normal",
+        "weight": "600"
+      },
+      "lineHeight": 1.2,
+      "letterSpacing": 0,
+      "fontSize": 80,
+      "align": "center",
+      "color": "#FFFFFF",
+      "highlightColor": "#39E508",
+      "direction": "ltr",
+      "pageDurationInMilliseconds": 2421,
+      "strokeWidth": 4,
+      "strokeColor": "#000000",
+      "maxLines": 2,
+      "contentStartOffsetMs": 26.666895548501998,
+      "source": "auto",
+      "captionGroupId": "qFKU",
+      "background": null,
+      "animations": {},
+      "isDraggingInTimeline": false,
+      "startTicks": 2576000,
+      "durationTicks": 592000
+    },
+    "kzD3": {
+      "type": "captions",
+      "id": "kzD3",
+      "assetId": "k4i7",
+      "top": {
+        "value": 1110,
+        "keyframes": []
+      },
+      "left": {
+        "value": 110,
+        "keyframes": []
+      },
+      "width": {
+        "value": 860,
+        "keyframes": []
+      },
+      "height": {
+        "value": 192,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "fontFamily": "TikTok Sans",
+      "fontStyle": {
+        "variant": "normal",
+        "weight": "600"
+      },
+      "lineHeight": 1.2,
+      "letterSpacing": 0,
+      "fontSize": 80,
+      "align": "center",
+      "color": "#FFFFFF",
+      "highlightColor": "#39E508",
+      "direction": "ltr",
+      "pageDurationInMilliseconds": 200,
+      "strokeWidth": 4,
+      "strokeColor": "#000000",
+      "maxLines": 2,
+      "contentStartOffsetMs": 13.33344777425009,
+      "source": "auto",
+      "captionGroupId": "qFKU",
+      "background": null,
+      "animations": {},
+      "isDraggingInTimeline": false,
+      "startTicks": 3328000,
+      "durationTicks": 10401
+    },
+    "Ql38": {
+      "type": "captions",
+      "id": "Ql38",
+      "assetId": "Iolg",
+      "top": {
+        "value": 1110,
+        "keyframes": []
+      },
+      "left": {
+        "value": 110,
+        "keyframes": []
+      },
+      "width": {
+        "value": 860,
+        "keyframes": []
+      },
+      "height": {
+        "value": 192,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "fontFamily": "TikTok Sans",
+      "fontStyle": {
+        "variant": "normal",
+        "weight": "600"
+      },
+      "lineHeight": 1.2,
+      "letterSpacing": 0,
+      "fontSize": 80,
+      "align": "center",
+      "color": "#FFFFFF",
+      "highlightColor": "#39E508",
+      "direction": "ltr",
+      "pageDurationInMilliseconds": 200,
+      "strokeWidth": 4,
+      "strokeColor": "#000000",
+      "maxLines": 2,
+      "contentStartOffsetMs": 0.0003814697247435106,
+      "source": "auto",
+      "captionGroupId": "qFKU",
+      "background": null,
+      "animations": {},
+      "isDraggingInTimeline": false,
+      "startTicks": 3504000,
+      "durationTicks": 24000
     }
   },
   "transitions": {},
-  "globalBackground": {
-    "type": "color",
-    "color": "#020617",
-    "gradient": "linear-gradient(135deg, #020617 0%, #1d4ed8 100%)"
-  }
+  "deletedAssets": []
 }

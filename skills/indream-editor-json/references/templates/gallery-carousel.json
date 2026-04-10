@@ -1,80 +1,97 @@
 {
-  "compositionWidth": 1280,
-  "compositionHeight": 720,
   "timebaseTicksPerSecond": 240000,
+  "compositionWidth": 1920,
+  "compositionHeight": 1080,
   "outputRatio": "16:9",
+  "globalBackground": {
+    "type": "color",
+    "color": "#000000",
+    "gradient": null
+  },
+  "brandRuntime": {
+    "logoX": 50,
+    "logoY": 50,
+    "brandId": null,
+    "managedItemIds": [],
+    "overlayTrackId": null,
+    "managedAssetIds": [],
+    "underlayTrackId": null,
+    "introShiftInFrames": 0
+  },
   "tracks": [
     {
-      "id": "track-media",
-      "hidden": false,
-      "muted": false,
+      "id": "track-main",
       "items": [
-        "item-image-1",
-        "item-image-2",
-        "item-image-3"
-      ]
-    },
-    {
-      "id": "track-overlay",
-      "hidden": false,
+        "item-img-1",
+        "item-img-2",
+        "item-img-3",
+        "item-img-4",
+        "item-img-5"
+      ],
       "muted": false,
-      "items": [
-        "item-title",
-        "item-label-1",
-        "item-label-2",
-        "item-label-3"
-      ]
-    },
-    {
-      "id": "track-fx",
-      "hidden": false,
-      "muted": false,
-      "items": [
-        "item-filter-mid"
-      ]
+      "hidden": false
     }
   ],
   "assets": {
-    "asset-gallery-1": {
-      "id": "asset-gallery-1",
+    "asset-id-1": {
+      "id": "asset-id-1",
+      "size": 283964,
       "type": "image",
-      "filename": "gallery-1.png",
-      "size": 0,
-      "remoteUrl": "https://r.indream.ai/system/presets/154c197a-92c3-4bef-8560-4b9b70688a57.png",
-      "remoteKey": null,
-      "mimeType": "image/png",
-      "width": 1024,
-      "height": 1024
+      "width": 1920,
+      "height": 1080,
+      "filename": "photo-1.jpg",
+      "mimeType": "image/jpeg",
+      "remoteKey": "photo-1.jpg",
+      "remoteUrl": "https://r.indream.ai/photo-1.jpg"
     },
-    "asset-gallery-2": {
-      "id": "asset-gallery-2",
+    "asset-id-2": {
+      "id": "asset-id-2",
+      "size": 287597,
       "type": "image",
-      "filename": "gallery-2.png",
-      "size": 0,
-      "remoteUrl": "https://r.indream.ai/system/presets/c1a286f5-a2f9-4fd4-92e5-cbb92585bed6.png",
-      "remoteKey": null,
-      "mimeType": "image/png",
-      "width": 1024,
-      "height": 1024
+      "width": 1920,
+      "height": 1080,
+      "filename": "photo-2.jpg",
+      "mimeType": "image/jpeg",
+      "remoteKey": "photo-2.jpg",
+      "remoteUrl": "https://r.indream.ai/photo-2.jpg"
     },
-    "asset-gallery-3": {
-      "id": "asset-gallery-3",
+    "asset-id-3": {
+      "id": "asset-id-3",
+      "size": 556733,
       "type": "image",
-      "filename": "gallery-3.png",
-      "size": 0,
-      "remoteUrl": "https://r.indream.ai/system/presets/d6f6de7b-2c38-4f9c-82d5-79adac647911.png",
-      "remoteKey": null,
-      "mimeType": "image/png",
-      "width": 1024,
-      "height": 1024
+      "width": 1920,
+      "height": 1080,
+      "filename": "photo-3.jpg",
+      "mimeType": "image/jpeg",
+      "remoteKey": "photo-3.jpg",
+      "remoteUrl": "https://r.indream.ai/photo-3.jpg"
+    },
+    "asset-id-4": {
+      "id": "asset-id-4",
+      "size": 243712,
+      "type": "image",
+      "width": 1920,
+      "height": 1080,
+      "filename": "photo-4.jpg",
+      "mimeType": "image/jpeg",
+      "remoteKey": "photo-4.jpg",
+      "remoteUrl": "https://r.indream.ai/photo-4.jpg"
+    },
+    "asset-id-5": {
+      "id": "asset-id-5",
+      "size": 202716,
+      "type": "image",
+      "width": 1920,
+      "height": 1080,
+      "filename": "photo-5.jpg",
+      "mimeType": "image/jpeg",
+      "remoteKey": "photo-5.jpg",
+      "remoteUrl": "https://r.indream.ai/photo-5.jpg"
     }
   },
   "items": {
-    "item-image-1": {
-      "id": "item-image-1",
-      "type": "image",
-      "startTicks": 0,
-      "durationTicks": 480000,
+    "item-img-1": {
+      "id": "item-img-1",
       "top": {
         "value": 0,
         "keyframes": []
@@ -83,12 +100,13 @@
         "value": 0,
         "keyframes": []
       },
+      "type": "image",
       "width": {
-        "value": 1280,
+        "value": 1920,
         "keyframes": []
       },
       "height": {
-        "value": 720,
+        "value": 1080,
         "keyframes": []
       },
       "scaleX": {
@@ -99,50 +117,32 @@
         "value": 1,
         "keyframes": []
       },
+      "assetId": "asset-id-1",
       "opacity": {
         "value": 1,
-        "keyframes": []
-      },
-      "isDraggingInTimeline": false,
-      "assetId": "asset-gallery-1",
-      "keepAspectRatio": true,
-      "borderRadius": {
-        "value": 0,
         "keyframes": []
       },
       "rotation": {
         "value": 0,
         "keyframes": []
       },
-      "cropLeft": {
+      "borderRadius": {
         "value": 0,
         "keyframes": []
       },
-      "cropTop": {
-        "value": 0,
-        "keyframes": []
-      },
-      "cropRight": {
-        "value": 0,
-        "keyframes": []
-      },
-      "cropBottom": {
-        "value": 0,
-        "keyframes": []
-      },
+      "keepAspectRatio": true,
+      "isDraggingInTimeline": false,
       "animations": {
         "in": {
-          "type": "zoom-in",
-          "durationTicks": 96000,
-          "easing": "ease-out"
+          "type": "fade",
+          "durationTicks": 72000
         }
-      }
+      },
+      "startTicks": 0,
+      "durationTicks": 368000
     },
-    "item-image-2": {
-      "id": "item-image-2",
-      "type": "image",
-      "startTicks": 480000,
-      "durationTicks": 480000,
+    "item-img-2": {
+      "id": "item-img-2",
       "top": {
         "value": 0,
         "keyframes": []
@@ -151,12 +151,13 @@
         "value": 0,
         "keyframes": []
       },
+      "type": "image",
       "width": {
-        "value": 1280,
+        "value": 1920,
         "keyframes": []
       },
       "height": {
-        "value": 720,
+        "value": 1080,
         "keyframes": []
       },
       "scaleX": {
@@ -167,43 +168,26 @@
         "value": 1,
         "keyframes": []
       },
+      "assetId": "asset-id-2",
       "opacity": {
         "value": 1,
-        "keyframes": []
-      },
-      "isDraggingInTimeline": false,
-      "assetId": "asset-gallery-2",
-      "keepAspectRatio": true,
-      "borderRadius": {
-        "value": 0,
         "keyframes": []
       },
       "rotation": {
         "value": 0,
         "keyframes": []
       },
-      "cropLeft": {
+      "borderRadius": {
         "value": 0,
         "keyframes": []
       },
-      "cropTop": {
-        "value": 0,
-        "keyframes": []
-      },
-      "cropRight": {
-        "value": 0,
-        "keyframes": []
-      },
-      "cropBottom": {
-        "value": 0,
-        "keyframes": []
-      }
+      "keepAspectRatio": true,
+      "isDraggingInTimeline": false,
+      "startTicks": 368000,
+      "durationTicks": 360000
     },
-    "item-image-3": {
-      "id": "item-image-3",
-      "type": "image",
-      "startTicks": 960000,
-      "durationTicks": 480000,
+    "item-img-3": {
+      "id": "item-img-3",
       "top": {
         "value": 0,
         "keyframes": []
@@ -212,12 +196,13 @@
         "value": 0,
         "keyframes": []
       },
+      "type": "image",
       "width": {
-        "value": 1280,
+        "value": 1920,
         "keyframes": []
       },
       "height": {
-        "value": 720,
+        "value": 1080,
         "keyframes": []
       },
       "scaleX": {
@@ -228,311 +213,166 @@
         "value": 1,
         "keyframes": []
       },
+      "assetId": "asset-id-3",
       "opacity": {
         "value": 1,
-        "keyframes": []
-      },
-      "isDraggingInTimeline": false,
-      "assetId": "asset-gallery-3",
-      "keepAspectRatio": true,
-      "borderRadius": {
-        "value": 0,
         "keyframes": []
       },
       "rotation": {
         "value": 0,
         "keyframes": []
       },
-      "cropLeft": {
+      "borderRadius": {
         "value": 0,
         "keyframes": []
       },
-      "cropTop": {
+      "keepAspectRatio": true,
+      "isDraggingInTimeline": false,
+      "startTicks": 728000,
+      "durationTicks": 360000
+    },
+    "item-img-4": {
+      "id": "item-img-4",
+      "top": {
         "value": 0,
         "keyframes": []
       },
-      "cropRight": {
+      "left": {
         "value": 0,
         "keyframes": []
       },
-      "cropBottom": {
+      "type": "image",
+      "width": {
+        "value": 1920,
+        "keyframes": []
+      },
+      "height": {
+        "value": 1080,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "assetId": "asset-id-4",
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "rotation": {
         "value": 0,
         "keyframes": []
       },
+      "borderRadius": {
+        "value": 0,
+        "keyframes": []
+      },
+      "keepAspectRatio": true,
+      "isDraggingInTimeline": false,
+      "startTicks": 1088000,
+      "durationTicks": 360000
+    },
+    "item-img-5": {
+      "id": "item-img-5",
+      "top": {
+        "value": 0,
+        "keyframes": []
+      },
+      "left": {
+        "value": 0,
+        "keyframes": []
+      },
+      "type": "image",
+      "width": {
+        "value": 1920,
+        "keyframes": []
+      },
+      "height": {
+        "value": 1080,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "assetId": "asset-id-5",
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "borderRadius": {
+        "value": 0,
+        "keyframes": []
+      },
+      "keepAspectRatio": true,
+      "isDraggingInTimeline": false,
       "animations": {
         "out": {
-          "type": "slide-left",
-          "durationTicks": 96000,
-          "easing": "ease-in"
+          "type": "zoom-in",
+          "durationTicks": 72000
         }
-      }
-    },
-    "item-title": {
-      "id": "item-title",
-      "type": "text",
-      "startTicks": 0,
-      "durationTicks": 1440000,
-      "top": {
-        "value": 44,
-        "keyframes": []
       },
-      "left": {
-        "value": 80,
-        "keyframes": []
-      },
-      "width": {
-        "value": 1120,
-        "keyframes": []
-      },
-      "height": {
-        "value": 100,
-        "keyframes": []
-      },
-      "scaleX": {
-        "value": 1,
-        "keyframes": []
-      },
-      "scaleY": {
-        "value": 1,
-        "keyframes": []
-      },
-      "opacity": {
-        "value": 1,
-        "keyframes": []
-      },
-      "isDraggingInTimeline": false,
-      "text": "Gallery Carousel",
-      "color": "#ffffff",
-      "align": "left",
-      "fontFamily": "TikTok Sans",
-      "fontStyle": {
-        "variant": "normal",
-        "weight": "700"
-      },
-      "fontSize": 66,
-      "lineHeight": 1.1,
-      "letterSpacing": 0,
-      "resizeOnEdit": true,
-      "direction": "ltr",
-      "strokeWidth": 0,
-      "strokeColor": "#000000",
-      "background": null,
-      "rotation": {
-        "value": 0,
-        "keyframes": []
-      }
-    },
-    "item-label-1": {
-      "id": "item-label-1",
-      "type": "text",
-      "startTicks": 0,
-      "durationTicks": 480000,
-      "top": {
-        "value": 620,
-        "keyframes": []
-      },
-      "left": {
-        "value": 80,
-        "keyframes": []
-      },
-      "width": {
-        "value": 520,
-        "keyframes": []
-      },
-      "height": {
-        "value": 70,
-        "keyframes": []
-      },
-      "scaleX": {
-        "value": 1,
-        "keyframes": []
-      },
-      "scaleY": {
-        "value": 1,
-        "keyframes": []
-      },
-      "opacity": {
-        "value": 1,
-        "keyframes": []
-      },
-      "isDraggingInTimeline": false,
-      "text": "Scene 01  Coastal Color",
-      "color": "#ffffff",
-      "align": "left",
-      "fontFamily": "TikTok Sans",
-      "fontStyle": {
-        "variant": "normal",
-        "weight": "600"
-      },
-      "fontSize": 28,
-      "lineHeight": 1.1,
-      "letterSpacing": 0,
-      "resizeOnEdit": true,
-      "direction": "ltr",
-      "strokeWidth": 0,
-      "strokeColor": "#000000",
-      "background": {
-        "color": "#00000088",
-        "horizontalPadding": 16,
-        "borderRadius": 18
-      },
-      "rotation": {
-        "value": 0,
-        "keyframes": []
-      }
-    },
-    "item-label-2": {
-      "id": "item-label-2",
-      "type": "text",
-      "startTicks": 480000,
-      "durationTicks": 480000,
-      "top": {
-        "value": 620,
-        "keyframes": []
-      },
-      "left": {
-        "value": 80,
-        "keyframes": []
-      },
-      "width": {
-        "value": 520,
-        "keyframes": []
-      },
-      "height": {
-        "value": 70,
-        "keyframes": []
-      },
-      "scaleX": {
-        "value": 1,
-        "keyframes": []
-      },
-      "scaleY": {
-        "value": 1,
-        "keyframes": []
-      },
-      "opacity": {
-        "value": 1,
-        "keyframes": []
-      },
-      "isDraggingInTimeline": false,
-      "text": "Scene 02  Filter Window",
-      "color": "#ffffff",
-      "align": "left",
-      "fontFamily": "TikTok Sans",
-      "fontStyle": {
-        "variant": "normal",
-        "weight": "600"
-      },
-      "fontSize": 28,
-      "lineHeight": 1.1,
-      "letterSpacing": 0,
-      "resizeOnEdit": true,
-      "direction": "ltr",
-      "strokeWidth": 0,
-      "strokeColor": "#000000",
-      "background": {
-        "color": "#00000088",
-        "horizontalPadding": 16,
-        "borderRadius": 18
-      },
-      "rotation": {
-        "value": 0,
-        "keyframes": []
-      }
-    },
-    "item-label-3": {
-      "id": "item-label-3",
-      "type": "text",
-      "startTicks": 960000,
-      "durationTicks": 480000,
-      "top": {
-        "value": 620,
-        "keyframes": []
-      },
-      "left": {
-        "value": 80,
-        "keyframes": []
-      },
-      "width": {
-        "value": 560,
-        "keyframes": []
-      },
-      "height": {
-        "value": 70,
-        "keyframes": []
-      },
-      "scaleX": {
-        "value": 1,
-        "keyframes": []
-      },
-      "scaleY": {
-        "value": 1,
-        "keyframes": []
-      },
-      "opacity": {
-        "value": 1,
-        "keyframes": []
-      },
-      "isDraggingInTimeline": false,
-      "text": "Scene 03  Wipe Transition",
-      "color": "#ffffff",
-      "align": "left",
-      "fontFamily": "TikTok Sans",
-      "fontStyle": {
-        "variant": "normal",
-        "weight": "600"
-      },
-      "fontSize": 28,
-      "lineHeight": 1.1,
-      "letterSpacing": 0,
-      "resizeOnEdit": true,
-      "direction": "ltr",
-      "strokeWidth": 0,
-      "strokeColor": "#000000",
-      "background": {
-        "color": "#00000088",
-        "horizontalPadding": 16,
-        "borderRadius": 18
-      },
-      "rotation": {
-        "value": 0,
-        "keyframes": []
-      }
-    },
-    "item-filter-mid": {
-      "id": "item-filter-mid",
-      "type": "filter",
-      "filterType": "cyberpunk-neon",
-      "intensity": 1,
-      "startTicks": 480000,
-      "durationTicks": 480000,
-      "isDraggingInTimeline": false,
-      "params": {
-        "blend": 0.9
-      }
+      "startTicks": 1448000,
+      "durationTicks": 376000
     }
   },
   "transitions": {
-    "transition-1": {
-      "id": "transition-1",
-      "trackId": "track-media",
-      "fromClipId": "item-image-1",
-      "toClipId": "item-image-2",
-      "type": "fade",
-      "durationTicks": 64000,
-      "easing": "ease-in-out"
+    "sx0n": {
+      "id": "sx0n",
+      "trackId": "track-main",
+      "fromClipId": "item-img-1",
+      "toClipId": "item-img-2",
+      "type": "slide",
+      "params": {
+        "direction": "from-left"
+      },
+      "durationTicks": 120000
     },
-    "transition-2": {
-      "id": "transition-2",
-      "trackId": "track-media",
-      "fromClipId": "item-image-2",
-      "toClipId": "item-image-3",
-      "type": "wipe",
-      "durationTicks": 64000,
-      "easing": "ease-in-out",
+    "noTn": {
+      "id": "noTn",
+      "trackId": "track-main",
+      "fromClipId": "item-img-3",
+      "toClipId": "item-img-4",
+      "type": "slide",
       "params": {
         "direction": "from-right"
-      }
+      },
+      "durationTicks": 120000
+    },
+    "d56H": {
+      "id": "d56H",
+      "trackId": "track-main",
+      "fromClipId": "item-img-2",
+      "toClipId": "item-img-3",
+      "type": "slide",
+      "params": {
+        "direction": "from-top"
+      },
+      "durationTicks": 120000
+    },
+    "vKRA": {
+      "id": "vKRA",
+      "trackId": "track-main",
+      "fromClipId": "item-img-4",
+      "toClipId": "item-img-5",
+      "type": "wipe",
+      "params": {
+        "direction": "from-left"
+      },
+      "durationTicks": 120000
     }
-  }
+  },
+  "deletedAssets": []
 }

@@ -268,13 +268,17 @@ Common optional fields:
 
 Practical notes:
 
-- `chartType` is a free string in the schema, but the current editor implementation uses these practical values:
+- Supported `chartType` values are:
   - `line`
   - `bar`
   - `area`
   - `pie`
   - `radar`
   - `scatter`
+- `data` must match `chartType`:
+  - `line`, `bar`, `area`, and `radar` use `{ series: [{ key, label }], rows: [{ label, values: { [seriesKey]: number } }] }`
+  - `pie` uses `{ slices: [{ label, value }] }`
+  - `scatter` uses `{ series: [{ key, label }], points: [{ seriesKey, x, y }] }`
 - Use the user's requested chart type when they specify it.
 - If the user asked for a generic chart and no product-specific convention exists, `bar` is a safe default because it appears in fixtures and product code.
 - Keep `data` close to the user's source numbers instead of transforming it unnecessarily.

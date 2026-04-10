@@ -60,6 +60,19 @@ Fix:
 - ensure `fromClipId` and `toClipId` are neighbors in the same `track.items[]`
 - if the clips are intentionally separate scenes, move the transition to the actual neighboring pair or remove it
 
+### Track items overlap
+
+Symptoms:
+
+- `EDITOR_TRACK_ITEM_OVERLAP`
+- two items on the same track occupy overlapping time windows
+
+Fix:
+
+- re-time or reorder the items so the same track becomes strictly non-overlapping
+- edge-to-edge contact is allowed, so `previous.endTicks === next.startTicks` is valid
+- if both visuals must remain visible at the same time, move one item to a different track instead of forcing overlap
+
 ### Missing asset
 
 Symptoms:
@@ -98,6 +111,20 @@ Fix:
 - ensure background objects include `color`, `horizontalPadding`, and `borderRadius`
 - ensure caption animation names are supported
 
+### Word-timed captions use `captionAnimations`
+
+Symptoms:
+
+- `EDITOR_CAPTION_ANIMATION_WORD_TIMING_CONFLICT`
+- the linked caption asset uses `timingGranularity: "word"`
+- the `captions` item still includes `captionAnimations`
+
+Fix:
+
+- remove `captionAnimations` if the asset must remain word-timed
+- or change the authoring strategy to line-timed captions before adding subtitle animation
+- keep clip-level `animations` if whole-container motion is still needed
+
 ### Template item mismatch
 
 Symptoms:
@@ -107,8 +134,9 @@ Symptoms:
 Fix:
 
 - confirm `schemaVersion` is exactly `2`
-- ensure `nodes` has at least two entries
-- ensure each node has a `type`
+- ensure `nodes` has exactly 1 `image` node and 1 to 3 `text` nodes
+- ensure no node type other than `image` or `text` appears
+- repair node leaf fields instead of inventing ad-hoc keys
 - if the real template contract is unknown, replace the `text-template` item with standard `text` and `image` items
 
 ## Schema troubleshooting workflow
@@ -130,5 +158,5 @@ When the validator output is not enough:
 
 - Keep IDs stable while repairing.
 - Do not regenerate the entire JSON when only one field is invalid.
-- Preserve timing and track order unless the failure is caused by timing or adjacency.
+- Preserve timing and track order unless the failure is caused by timing, adjacency, or same-track overlap.
 - Preserve optional design choices such as crop, border radius, subtitle styling, and animation when they are already valid.

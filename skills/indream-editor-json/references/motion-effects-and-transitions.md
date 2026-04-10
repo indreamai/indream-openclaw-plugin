@@ -3,6 +3,7 @@
 ## Clip animations
 
 Many visual items can use clip-level `animations` with `in` and `out` keys.
+Clip animations affect the outer item container.
 
 Supported animation types:
 
@@ -37,6 +38,7 @@ Use clip animations for:
 - lower-third fly-ins
 - logo pop-ins
 - image or product zooms
+- moving, fading, or scaling the whole text box or subtitle container
 
 ## Keyframed motion
 
@@ -70,6 +72,8 @@ Practical rules:
 ## Caption animations
 
 `text` and `captions` items support `captionAnimations` with `in`, `out`, and `loop`.
+Caption animations affect inner text rendering and grapheme-level text behavior.
+They do not replace clip animations, and they do not move the outer item container by themselves.
 
 Supported animation names:
 
@@ -89,8 +93,11 @@ Suggested usage:
 - `loop` for ongoing energy on short social clips
 - `out` for final subtitle departure
 - For `captions` items, use one short `in` animation as the production-safe default, then add `loop` or `out` only after a real export probe.
+- Use clip `animations` when the whole subtitle box or text item should move, scale, or fade.
+- Use `captionAnimations` when the text inside that box should animate.
 
 Avoid long looping animations on dense subtitle tracks unless the user explicitly wants a high-energy style.
+Do not describe clip animations and caption animations as interchangeable tools.
 
 ## Effects
 
@@ -137,6 +144,7 @@ Use filters for:
 ## Transitions
 
 Transitions connect two adjacent clips on the same track.
+They are seam effects between touching clips, not general-purpose item motion.
 
 Required fields:
 
@@ -186,9 +194,11 @@ Common optional fields:
 Transition rules:
 
 - only use transitions between neighboring clips in one `track.items[]`
+- only use transitions when those clips touch edge-to-edge in time
 - do not span clips on different tracks
 - do not use transitions as a replacement for effect items
 - do not add transitions when the edit is a hard cut unless the user asked for a transition
+- if a seam already uses a transition, avoid adding a redundant `animations.in` on the incoming clip for that same seam unless the user explicitly wants layered motion
 
 ## Motion design guidelines
 

@@ -113,6 +113,19 @@ Notes:
 - Preserve caption entries from the source whenever possible instead of rewriting them.
 - Caption assets may have `remoteUrl` and `remoteKey` set to `null`.
 
+Line-timed caption asset:
+
+- each `captions[]` entry is usually one subtitle line or cue
+- preserve `text`, `startMs`, and `endMs`
+
+Word-timed caption asset:
+
+- `captions[]` must be a flat per-word or per-token list
+- preserve `text`, `startMs`, and `endMs` for every word or token
+- preserve optional `timestampMs` and `confidence` when the source provides them
+- do not embed grouped `cues` objects inside the editor asset
+- if the source JSON arrives as `cues[].words[]`, flatten those word entries into `assets[*].captions[]` when building editor JSON
+
 ### Lottie asset
 
 Required shape:

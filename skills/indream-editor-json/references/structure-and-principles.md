@@ -101,6 +101,15 @@ Example:
 }
 ```
 
+## Track timing and stacking
+
+Same-track items may touch edge-to-edge, but they must never overlap in time.
+If two visuals need to be visible at once, put them on different tracks instead of forcing overlap inside one track.
+
+Track order also controls front-to-back stacking.
+Earlier tracks render above later tracks.
+Place opaque backgrounds, long-running fills, or full-screen media on lower tracks so they do not hide overlays that still need to be seen.
+
 ## Track planning patterns
 
 ### Sequential slideshow
@@ -132,28 +141,49 @@ Each transition must:
 
 - reference one `trackId`
 - use `fromClipId` and `toClipId` that are adjacent in that track
+- connect clips that touch edge-to-edge in time
 - use a supported transition type
+- act as the seam motion for that cut rather than as a general motion layer
 
 Do not create transitions across different tracks.
+Do not pair a transition with a redundant incoming clip entry animation at the same seam unless the user explicitly wants both.
 
 ## Optional top-level sections
 
 ### `globalBackground`
 
 Use when the entire composition needs a background treatment.
-Supported schema forms:
+Supported stable forms:
 
 - `none`
-- `color`
-- `blur`
-- `image`
+- `color`: requires `color`; `gradient` may be `null`
+- `blur`: requires `level`
+- `image`: requires `imageUrl` and `source`; `imageAssetId` may be `null`
 
 ### `brandRuntime`
 
 This field can appear in existing drafts.
+If present, keep the stable object shape:
+
+- `brandId`
+- `logoX`
+- `logoY`
+- `managedItemIds`
+- `managedAssetIds`
+- `introShiftInFrames`
+- `overlayTrackId`
+- `underlayTrackId`
+
 Preserve it if it is already present and valid, but do not treat it as a new authoring surface for this Open API skill.
 
 ### `deletedAssets`
 
 Usually preserve this from an existing draft.
+Each entry should use:
+
+- `assetId`
+- `remoteUrl`
+- `remoteKey`
+- `statusAtDeletion`, where `type` is the stable discriminator and `error` is only needed for failure states
+
 Do not populate it during a fresh authoring pass unless you are deliberately editing asset deletion state.

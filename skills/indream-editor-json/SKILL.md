@@ -80,8 +80,10 @@ Produce editor JSON that is valid for the current Indream schema and capability 
 - `timebaseTicksPerSecond` must always be `240000`.
 - Keep IDs stable and readable. Reuse the same IDs across updates instead of regenerating them on every revision.
 - Every `track.items[]` entry must exist in `items`.
+- Within one track, items may touch edge-to-edge, but they must never overlap in time.
 - Every item `assetId` must exist in `assets`.
 - Use the upload result from `indream_assets_upload` directly when possible. The simplest stable pattern is to reuse `editorAssetMapping.assetId` as the editor asset key and as the item `assetId`.
+- Track order is visual stacking order. Earlier tracks render above later tracks, so do not place a fully opaque upper-track item over content that still needs to remain visible.
 - All geometry-like number fields must use the animated number track shape:
   - `{ "value": number, "keyframes": [] }` for static values
   - `{ "value": number, "keyframes": [{ "timeTicks": n, "value": number }] }` for animated values
@@ -91,6 +93,7 @@ Produce editor JSON that is valid for the current Indream schema and capability 
 - Do not invent unsupported `effectType`, `filterType`, `transition.type`, `illustrationName`, or caption animation names.
 - Do not invent unknown template node contracts. If a template-driven request lacks a real template contract, say so and fall back to regular items.
 - Prefer practical static defaults over speculative animation. Only add motion, transitions, or subtitle effects that the user asked for or that are clearly implied.
+- Treat transitions as seam motion between adjacent clips on the same track. If a seam already uses a transition, do not also add a redundant entry animation for that same moment unless the user explicitly asks for layered motion.
 
 ## Feature coverage
 

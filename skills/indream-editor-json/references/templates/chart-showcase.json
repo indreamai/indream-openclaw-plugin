@@ -1,69 +1,131 @@
 {
-  "compositionWidth": 1280,
-  "compositionHeight": 720,
   "timebaseTicksPerSecond": 240000,
+  "compositionWidth": 1920,
+  "compositionHeight": 1080,
   "outputRatio": "16:9",
+  "globalBackground": {
+    "type": "none"
+  },
+  "brandRuntime": {
+    "brandId": null,
+    "logoX": 50,
+    "logoY": 50,
+    "managedItemIds": [],
+    "managedAssetIds": [],
+    "introShiftInFrames": 0,
+    "overlayTrackId": null,
+    "underlayTrackId": null
+  },
   "tracks": [
     {
-      "id": "track-background",
-      "hidden": false,
-      "muted": false,
+      "id": "track-caption",
       "items": [
-        "item-bg"
-      ]
+        "cap-1",
+        "cap-2",
+        "cap-3",
+        "cap-4",
+        "cap-5"
+      ],
+      "muted": false,
+      "hidden": false
     },
     {
-      "id": "track-charts",
-      "hidden": false,
-      "muted": false,
+      "id": "track-title",
       "items": [
-        "item-chart-line",
-        "item-chart-bar",
-        "item-chart-pie"
-      ]
+        "title-1",
+        "title-2",
+        "title-3",
+        "title-4",
+        "title-5"
+      ],
+      "muted": false,
+      "hidden": false
+    },
+    {
+      "id": "track-sub",
+      "items": [
+        "sub-1",
+        "sub-2",
+        "sub-3",
+        "sub-4",
+        "sub-5"
+      ],
+      "muted": false,
+      "hidden": false
+    },
+    {
+      "id": "track-chart",
+      "items": [
+        "chart-2",
+        "chart-3",
+        "chart-4"
+      ],
+      "muted": false,
+      "hidden": false
+    },
+    {
+      "id": "track-accent",
+      "items": [
+        "accent-1",
+        "accent-2",
+        "accent-3",
+        "accent-4",
+        "accent-5"
+      ],
+      "muted": false,
+      "hidden": false
     },
     {
       "id": "track-overlay",
-      "hidden": false,
-      "muted": false,
       "items": [
-        "item-title",
-        "item-note-line",
-        "item-note-bar",
-        "item-note-pie",
-        "item-illustration"
-      ]
+        "overlay-main"
+      ],
+      "muted": false,
+      "hidden": false
     },
     {
-      "id": "track-fx",
-      "hidden": false,
-      "muted": false,
+      "id": "track-bg",
       "items": [
-        "item-filter-bar"
-      ]
+        "bg-main"
+      ],
+      "muted": false,
+      "hidden": false
     }
   ],
-  "assets": {},
+  "assets": {
+    "assets-id-1": {
+      "id": "assets-id-1",
+      "size": 199553,
+      "type": "image",
+      "width": 1920,
+      "height": 1080,
+      "filename": "dark-bg.jpg",
+      "mimeType": "image/jpeg",
+      "remoteKey": "photo-1.jpg",
+      "remoteUrl": "https://r.indream.ai/photo-1.jpg"
+    }
+  },
   "items": {
-    "item-bg": {
-      "id": "item-bg",
-      "type": "solid",
-      "startTicks": 0,
-      "durationTicks": 1680000,
+    "cap-1": {
+      "id": "cap-1",
       "top": {
-        "value": 0,
+        "value": 920,
         "keyframes": []
       },
       "left": {
-        "value": 0,
+        "value": 160,
         "keyframes": []
       },
+      "text": "Here is your Q2 growth snapshot.",
+      "type": "text",
+      "align": "center",
+      "color": "#e2e8f0",
       "width": {
-        "value": 1280,
+        "value": 1600,
         "keyframes": []
       },
       "height": {
-        "value": 720,
+        "value": 60,
         "keyframes": []
       },
       "scaleX": {
@@ -75,140 +137,330 @@
         "keyframes": []
       },
       "opacity": {
-        "value": 1,
+        "value": 0.9,
         "keyframes": []
       },
-      "isDraggingInTimeline": false,
-      "color": "#0f172a",
-      "shape": "rectangle",
-      "keepAspectRatio": false,
-      "borderRadius": {
-        "value": 0,
-        "keyframes": []
-      },
+      "fontSize": 34,
       "rotation": {
         "value": 0,
         "keyframes": []
-      }
-    },
-    "item-chart-line": {
-      "id": "item-chart-line",
-      "type": "chart",
-      "startTicks": 0,
-      "durationTicks": 560000,
-      "top": {
-        "value": 140,
-        "keyframes": []
       },
-      "left": {
-        "value": 120,
-        "keyframes": []
-      },
-      "width": {
-        "value": 1040,
-        "keyframes": []
-      },
-      "height": {
-        "value": 420,
-        "keyframes": []
-      },
-      "scaleX": {
-        "value": 1,
-        "keyframes": []
-      },
-      "scaleY": {
-        "value": 1,
-        "keyframes": []
-      },
-      "opacity": {
-        "value": 1,
-        "keyframes": []
-      },
-      "isDraggingInTimeline": false,
-      "chartType": "line",
-      "themeColor": "#3b82f6",
-      "data": {
-        "series": [
-          {
-            "key": "seriesA",
-            "label": "Series A"
-          },
-          {
-            "key": "seriesB",
-            "label": "Series B"
-          }
-        ],
-        "rows": [
-          {
-            "label": "Jan",
-            "values": {
-              "seriesA": 42,
-              "seriesB": 35
-            }
-          },
-          {
-            "label": "Feb",
-            "values": {
-              "seriesA": 58,
-              "seriesB": 46
-            }
-          },
-          {
-            "label": "Mar",
-            "values": {
-              "seriesA": 51,
-              "seriesB": 63
-            }
-          },
-          {
-            "label": "Apr",
-            "values": {
-              "seriesA": 76,
-              "seriesB": 69
-            }
-          },
-          {
-            "label": "May",
-            "values": {
-              "seriesA": 90,
-              "seriesB": 82
-            }
-          }
-        ]
-      },
-      "animationDurationTicks": 192000,
-      "keepAspectRatio": false,
-      "rotation": {
-        "value": 0,
-        "keyframes": []
+      "direction": "ltr",
+      "fontStyle": {
+        "weight": "400",
+        "variant": "normal"
       },
       "animations": {
         "in": {
           "type": "fade",
-          "durationTicks": 80000,
-          "easing": "ease-out"
+          "easing": "ease-out",
+          "durationTicks": 72000
+        },
+        "out": {
+          "type": "fade",
+          "easing": "ease-in",
+          "durationTicks": 64000
         }
-      }
+      },
+      "background": null,
+      "fontFamily": "TikTok Sans",
+      "lineHeight": 1.25,
+      "strokeColor": "#000000",
+      "strokeWidth": 0,
+      "resizeOnEdit": false,
+      "letterSpacing": 0,
+      "isDraggingInTimeline": false,
+      "startTicks": 0,
+      "durationTicks": 480000
     },
-    "item-chart-bar": {
-      "id": "item-chart-bar",
-      "type": "chart",
-      "startTicks": 560000,
-      "durationTicks": 560000,
+    "cap-2": {
+      "id": "cap-2",
       "top": {
-        "value": 140,
+        "value": 920,
         "keyframes": []
       },
       "left": {
-        "value": 120,
+        "value": 160,
         "keyframes": []
       },
+      "text": "Revenue is up thirty-two percent.",
+      "type": "text",
+      "align": "center",
+      "color": "#e2e8f0",
       "width": {
-        "value": 1040,
+        "value": 1600,
         "keyframes": []
       },
       "height": {
-        "value": 420,
+        "value": 60,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 0.9,
+        "keyframes": []
+      },
+      "fontSize": 34,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "direction": "ltr",
+      "fontStyle": {
+        "weight": "400",
+        "variant": "normal"
+      },
+      "animations": {
+        "in": {
+          "type": "fade",
+          "easing": "ease-out",
+          "durationTicks": 72000
+        },
+        "out": {
+          "type": "fade",
+          "easing": "ease-in",
+          "durationTicks": 64000
+        }
+      },
+      "background": null,
+      "fontFamily": "TikTok Sans",
+      "lineHeight": 1.25,
+      "strokeColor": "#000000",
+      "strokeWidth": 0,
+      "resizeOnEdit": false,
+      "letterSpacing": 0,
+      "isDraggingInTimeline": false,
+      "startTicks": 480000,
+      "durationTicks": 480000
+    },
+    "cap-3": {
+      "id": "cap-3",
+      "top": {
+        "value": 920,
+        "keyframes": []
+      },
+      "left": {
+        "value": 160,
+        "keyframes": []
+      },
+      "text": "Retention improved across core users.",
+      "type": "text",
+      "align": "center",
+      "color": "#e2e8f0",
+      "width": {
+        "value": 1600,
+        "keyframes": []
+      },
+      "height": {
+        "value": 60,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 0.9,
+        "keyframes": []
+      },
+      "fontSize": 34,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "direction": "ltr",
+      "fontStyle": {
+        "weight": "400",
+        "variant": "normal"
+      },
+      "animations": {
+        "in": {
+          "type": "fade",
+          "easing": "ease-out",
+          "durationTicks": 72000
+        },
+        "out": {
+          "type": "fade",
+          "easing": "ease-in",
+          "durationTicks": 64000
+        }
+      },
+      "background": null,
+      "fontFamily": "TikTok Sans",
+      "lineHeight": 1.25,
+      "strokeColor": "#000000",
+      "strokeWidth": 0,
+      "resizeOnEdit": false,
+      "letterSpacing": 0,
+      "isDraggingInTimeline": false,
+      "startTicks": 960000,
+      "durationTicks": 480000
+    },
+    "cap-4": {
+      "id": "cap-4",
+      "top": {
+        "value": 920,
+        "keyframes": []
+      },
+      "left": {
+        "value": 160,
+        "keyframes": []
+      },
+      "text": "Momentum is building.",
+      "type": "text",
+      "align": "center",
+      "color": "#e2e8f0",
+      "width": {
+        "value": 1600,
+        "keyframes": []
+      },
+      "height": {
+        "value": 60,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 0.9,
+        "keyframes": []
+      },
+      "fontSize": 34,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "direction": "ltr",
+      "fontStyle": {
+        "weight": "400",
+        "variant": "normal"
+      },
+      "animations": {
+        "in": {
+          "type": "fade",
+          "easing": "ease-out",
+          "durationTicks": 72000
+        },
+        "out": {
+          "type": "fade",
+          "easing": "ease-in",
+          "durationTicks": 64000
+        }
+      },
+      "background": null,
+      "fontFamily": "TikTok Sans",
+      "lineHeight": 1.25,
+      "strokeColor": "#000000",
+      "strokeWidth": 0,
+      "resizeOnEdit": false,
+      "letterSpacing": 0,
+      "isDraggingInTimeline": false,
+      "startTicks": 1440000,
+      "durationTicks": 600000
+    },
+    "cap-5": {
+      "id": "cap-5",
+      "top": {
+        "value": 920,
+        "keyframes": []
+      },
+      "left": {
+        "value": 160,
+        "keyframes": []
+      },
+      "text": "Clear signals lead to confident decisions.",
+      "type": "text",
+      "align": "center",
+      "color": "#e2e8f0",
+      "width": {
+        "value": 1600,
+        "keyframes": []
+      },
+      "height": {
+        "value": 60,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 0.9,
+        "keyframes": []
+      },
+      "fontSize": 34,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "direction": "ltr",
+      "fontStyle": {
+        "weight": "400",
+        "variant": "normal"
+      },
+      "animations": {
+        "in": {
+          "type": "fade",
+          "easing": "ease-out",
+          "durationTicks": 72000
+        },
+        "out": {
+          "type": "fade",
+          "easing": "ease-in",
+          "durationTicks": 64000
+        }
+      },
+      "background": null,
+      "fontFamily": "TikTok Sans",
+      "lineHeight": 1.25,
+      "strokeColor": "#000000",
+      "strokeWidth": 0,
+      "resizeOnEdit": false,
+      "letterSpacing": 0,
+      "isDraggingInTimeline": false,
+      "startTicks": 2040000,
+      "durationTicks": 360000
+    },
+    "sub-1": {
+      "id": "sub-1",
+      "top": {
+        "value": 560,
+        "keyframes": []
+      },
+      "left": {
+        "value": 280,
+        "keyframes": []
+      },
+      "text": "A quick look at the numbers that matter.",
+      "type": "text",
+      "align": "center",
+      "color": "#94a3b8",
+      "width": {
+        "value": 1360,
+        "keyframes": []
+      },
+      "height": {
+        "value": 72,
         "keyframes": []
       },
       "scaleX": {
@@ -223,84 +475,415 @@
         "value": 1,
         "keyframes": []
       },
+      "fontSize": 30,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "direction": "ltr",
+      "fontStyle": {
+        "weight": "400",
+        "variant": "normal"
+      },
+      "animations": {
+        "in": {
+          "type": "fade",
+          "easing": "ease-out",
+          "durationTicks": 72000
+        },
+        "out": {
+          "type": "fade",
+          "easing": "ease-in",
+          "durationTicks": 64000
+        }
+      },
+      "background": null,
+      "fontFamily": "TikTok Sans",
+      "lineHeight": 1.25,
+      "strokeColor": "#000000",
+      "strokeWidth": 0,
+      "resizeOnEdit": false,
+      "letterSpacing": 0,
       "isDraggingInTimeline": false,
-      "chartType": "bar",
-      "themeColor": "#3b82f6",
+      "startTicks": 0,
+      "durationTicks": 480000
+    },
+    "sub-2": {
+      "id": "sub-2",
+      "top": {
+        "value": 420,
+        "keyframes": []
+      },
+      "left": {
+        "value": 80,
+        "keyframes": []
+      },
+      "text": "Stronger conversion across key channels.",
+      "type": "text",
+      "align": "left",
+      "color": "#94a3b8",
+      "width": {
+        "value": 840,
+        "keyframes": []
+      },
+      "height": {
+        "value": 72,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "fontSize": 28,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "direction": "ltr",
+      "fontStyle": {
+        "weight": "400",
+        "variant": "normal"
+      },
+      "animations": {
+        "in": {
+          "type": "fade",
+          "easing": "ease-out",
+          "durationTicks": 72000
+        },
+        "out": {
+          "type": "fade",
+          "easing": "ease-in",
+          "durationTicks": 64000
+        }
+      },
+      "background": null,
+      "fontFamily": "TikTok Sans",
+      "lineHeight": 1.25,
+      "strokeColor": "#000000",
+      "strokeWidth": 0,
+      "resizeOnEdit": false,
+      "letterSpacing": 0,
+      "isDraggingInTimeline": false,
+      "startTicks": 480000,
+      "durationTicks": 480000
+    },
+    "sub-3": {
+      "id": "sub-3",
+      "top": {
+        "value": 420,
+        "keyframes": []
+      },
+      "left": {
+        "value": 80,
+        "keyframes": []
+      },
+      "text": "Returning users stayed active longer.",
+      "type": "text",
+      "align": "left",
+      "color": "#94a3b8",
+      "width": {
+        "value": 840,
+        "keyframes": []
+      },
+      "height": {
+        "value": 72,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "fontSize": 28,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "direction": "ltr",
+      "fontStyle": {
+        "weight": "400",
+        "variant": "normal"
+      },
+      "animations": {
+        "in": {
+          "type": "fade",
+          "easing": "ease-out",
+          "durationTicks": 72000
+        },
+        "out": {
+          "type": "fade",
+          "easing": "ease-in",
+          "durationTicks": 64000
+        }
+      },
+      "background": null,
+      "fontFamily": "TikTok Sans",
+      "lineHeight": 1.25,
+      "strokeColor": "#000000",
+      "strokeWidth": 0,
+      "resizeOnEdit": false,
+      "letterSpacing": 0,
+      "isDraggingInTimeline": false,
+      "startTicks": 960000,
+      "durationTicks": 480000
+    },
+    "sub-4": {
+      "id": "sub-4",
+      "top": {
+        "value": 420,
+        "keyframes": []
+      },
+      "left": {
+        "value": 80,
+        "keyframes": []
+      },
+      "text": "Consistent gains across acquisition and loyalty.",
+      "type": "text",
+      "align": "left",
+      "color": "#94a3b8",
+      "width": {
+        "value": 840,
+        "keyframes": []
+      },
+      "height": {
+        "value": 72,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "fontSize": 28,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "direction": "ltr",
+      "fontStyle": {
+        "weight": "400",
+        "variant": "normal"
+      },
+      "animations": {
+        "in": {
+          "type": "fade",
+          "easing": "ease-out",
+          "durationTicks": 72000
+        },
+        "out": {
+          "type": "fade",
+          "easing": "ease-in",
+          "durationTicks": 64000
+        }
+      },
+      "background": null,
+      "fontFamily": "TikTok Sans",
+      "lineHeight": 1.25,
+      "strokeColor": "#000000",
+      "strokeWidth": 0,
+      "resizeOnEdit": false,
+      "letterSpacing": 0,
+      "isDraggingInTimeline": false,
+      "startTicks": 1440000,
+      "durationTicks": 600000
+    },
+    "sub-5": {
+      "id": "sub-5",
+      "top": {
+        "value": 560,
+        "keyframes": []
+      },
+      "left": {
+        "value": 280,
+        "keyframes": []
+      },
+      "text": "Clear signals. Confident decisions.",
+      "type": "text",
+      "align": "center",
+      "color": "#94a3b8",
+      "width": {
+        "value": 1360,
+        "keyframes": []
+      },
+      "height": {
+        "value": 72,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "fontSize": 30,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "direction": "ltr",
+      "fontStyle": {
+        "weight": "400",
+        "variant": "normal"
+      },
+      "animations": {
+        "in": {
+          "type": "fade",
+          "easing": "ease-out",
+          "durationTicks": 72000
+        },
+        "out": {
+          "type": "fade",
+          "easing": "ease-in",
+          "durationTicks": 64000
+        }
+      },
+      "background": null,
+      "fontFamily": "TikTok Sans",
+      "lineHeight": 1.25,
+      "strokeColor": "#000000",
+      "strokeWidth": 0,
+      "resizeOnEdit": false,
+      "letterSpacing": 0,
+      "isDraggingInTimeline": false,
+      "startTicks": 2040000,
+      "durationTicks": 360000
+    },
+    "bg-main": {
+      "id": "bg-main",
+      "top": {
+        "value": 0,
+        "keyframes": []
+      },
+      "left": {
+        "value": 0,
+        "keyframes": []
+      },
+      "type": "image",
+      "width": {
+        "value": 1920,
+        "keyframes": []
+      },
+      "height": {
+        "value": 1080,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "assetId": "assets-id-1",
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "borderRadius": {
+        "value": 0,
+        "keyframes": []
+      },
+      "keepAspectRatio": true,
+      "isDraggingInTimeline": false,
+      "startTicks": 0,
+      "durationTicks": 2400000
+    },
+    "chart-2": {
+      "id": "chart-2",
+      "top": {
+        "value": 160,
+        "keyframes": []
+      },
       "data": {
-        "series": [
-          {
-            "key": "seriesA",
-            "label": "Series A"
-          },
-          {
-            "key": "seriesB",
-            "label": "Series B"
-          }
-        ],
         "rows": [
           {
             "label": "Jan",
             "values": {
-              "seriesA": 42,
-              "seriesB": 35
+              "revenue": 85
             }
           },
           {
             "label": "Feb",
             "values": {
-              "seriesA": 58,
-              "seriesB": 46
+              "revenue": 92
             }
           },
           {
             "label": "Mar",
             "values": {
-              "seriesA": 51,
-              "seriesB": 63
+              "revenue": 98
             }
           },
           {
             "label": "Apr",
             "values": {
-              "seriesA": 76,
-              "seriesB": 69
+              "revenue": 108
             }
           },
           {
             "label": "May",
             "values": {
-              "seriesA": 90,
-              "seriesB": 82
+              "revenue": 115
             }
+          },
+          {
+            "label": "Jun",
+            "values": {
+              "revenue": 132
+            }
+          }
+        ],
+        "series": [
+          {
+            "key": "revenue",
+            "label": "Revenue (K)"
           }
         ]
       },
-      "animationDurationTicks": 192000,
-      "keepAspectRatio": false,
-      "rotation": {
-        "value": 0,
-        "keyframes": []
-      }
-    },
-    "item-chart-pie": {
-      "id": "item-chart-pie",
-      "type": "chart",
-      "startTicks": 1120000,
-      "durationTicks": 560000,
-      "top": {
-        "value": 120,
-        "keyframes": []
-      },
       "left": {
-        "value": 320,
+        "value": 980,
         "keyframes": []
       },
+      "type": "chart",
       "width": {
-        "value": 640,
+        "value": 860,
         "keyframes": []
       },
       "height": {
-        "value": 480,
+        "value": 660,
         "keyframes": []
       },
       "scaleX": {
@@ -315,340 +898,893 @@
         "value": 1,
         "keyframes": []
       },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "chartType": "bar",
+      "animations": {
+        "in": {
+          "type": "fade",
+          "easing": "ease-out",
+          "durationTicks": 96000
+        },
+        "out": {
+          "type": "fade",
+          "easing": "ease-in",
+          "durationTicks": 64000
+        }
+      },
+      "themeColor": "#38bdf8",
+      "keepAspectRatio": false,
       "isDraggingInTimeline": false,
-      "chartType": "pie",
-      "themeColor": "#3b82f6",
+      "startTicks": 480000,
+      "durationTicks": 480000,
+      "animationDurationTicks": 120000
+    },
+    "chart-3": {
+      "id": "chart-3",
+      "top": {
+        "value": 160,
+        "keyframes": []
+      },
       "data": {
-        "slices": [
+        "rows": [
           {
-            "label": "Desktop",
-            "value": 46
+            "label": "Jan",
+            "values": {
+              "retention": 62
+            }
           },
           {
-            "label": "Mobile",
-            "value": 34
+            "label": "Feb",
+            "values": {
+              "retention": 65
+            }
           },
           {
-            "label": "Tablet",
-            "value": 20
+            "label": "Mar",
+            "values": {
+              "retention": 68
+            }
+          },
+          {
+            "label": "Apr",
+            "values": {
+              "retention": 72
+            }
+          },
+          {
+            "label": "May",
+            "values": {
+              "retention": 76
+            }
+          },
+          {
+            "label": "Jun",
+            "values": {
+              "retention": 81
+            }
+          }
+        ],
+        "series": [
+          {
+            "key": "retention",
+            "label": "Retention (%)"
           }
         ]
       },
-      "animationDurationTicks": 192000,
+      "left": {
+        "value": 980,
+        "keyframes": []
+      },
+      "type": "chart",
+      "width": {
+        "value": 860,
+        "keyframes": []
+      },
+      "height": {
+        "value": 660,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "chartType": "area",
+      "animations": {
+        "in": {
+          "type": "fade",
+          "easing": "ease-out",
+          "durationTicks": 96000
+        },
+        "out": {
+          "type": "fade",
+          "easing": "ease-in",
+          "durationTicks": 64000
+        }
+      },
+      "themeColor": "#38bdf8",
       "keepAspectRatio": false,
+      "isDraggingInTimeline": false,
+      "startTicks": 960000,
+      "durationTicks": 480000,
+      "animationDurationTicks": 120000
+    },
+    "chart-4": {
+      "id": "chart-4",
+      "top": {
+        "value": 160,
+        "keyframes": []
+      },
+      "data": {
+        "rows": [
+          {
+            "label": "Q1",
+            "values": {
+              "loyalty": 58,
+              "acquisition": 42
+            }
+          },
+          {
+            "label": "Q2",
+            "values": {
+              "loyalty": 72,
+              "acquisition": 61
+            }
+          },
+          {
+            "label": "Q3",
+            "values": {
+              "loyalty": 85,
+              "acquisition": 78
+            }
+          }
+        ],
+        "series": [
+          {
+            "key": "acquisition",
+            "label": "Acquisition"
+          },
+          {
+            "key": "loyalty",
+            "label": "Loyalty"
+          }
+        ]
+      },
+      "left": {
+        "value": 980,
+        "keyframes": []
+      },
+      "type": "chart",
+      "width": {
+        "value": 860,
+        "keyframes": []
+      },
+      "height": {
+        "value": 660,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "chartType": "line",
+      "animations": {
+        "in": {
+          "type": "fade",
+          "easing": "ease-out",
+          "durationTicks": 96000
+        },
+        "out": {
+          "type": "fade",
+          "easing": "ease-in",
+          "durationTicks": 64000
+        }
+      },
+      "themeColor": "#38bdf8",
+      "keepAspectRatio": false,
+      "isDraggingInTimeline": false,
+      "startTicks": 1440000,
+      "durationTicks": 600000,
+      "animationDurationTicks": 120000
+    },
+    "title-1": {
+      "id": "title-1",
+      "top": {
+        "value": 394,
+        "keyframes": []
+      },
+      "left": {
+        "value": 280,
+        "keyframes": []
+      },
+      "text": "Q2 Growth Snapshot",
+      "type": "text",
+      "align": "center",
+      "color": "#ffffff",
+      "width": {
+        "value": 1360,
+        "keyframes": []
+      },
+      "height": {
+        "value": 160,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "fontSize": 84,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "direction": "ltr",
+      "fontStyle": {
+        "weight": "700",
+        "variant": "normal"
+      },
+      "animations": {
+        "in": {
+          "type": "slide-up",
+          "easing": "ease-out",
+          "durationTicks": 72000
+        },
+        "out": {
+          "type": "fade",
+          "easing": "ease-in",
+          "durationTicks": 64000
+        }
+      },
+      "background": null,
+      "fontFamily": "TikTok Sans",
+      "lineHeight": 1.25,
+      "strokeColor": "#000000",
+      "strokeWidth": 0,
+      "resizeOnEdit": false,
+      "letterSpacing": 0,
+      "isDraggingInTimeline": false,
+      "startTicks": 0,
+      "durationTicks": 480000
+    },
+    "title-2": {
+      "id": "title-2",
+      "top": {
+        "value": 292,
+        "keyframes": []
+      },
+      "left": {
+        "value": 80,
+        "keyframes": []
+      },
+      "text": "Revenue Up 32%",
+      "type": "text",
+      "align": "left",
+      "color": "#ffffff",
+      "width": {
+        "value": 840,
+        "keyframes": []
+      },
+      "height": {
+        "value": 120,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "fontSize": 72,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "direction": "ltr",
+      "fontStyle": {
+        "weight": "700",
+        "variant": "normal"
+      },
+      "animations": {
+        "in": {
+          "type": "slide-up",
+          "easing": "ease-out",
+          "durationTicks": 72000
+        },
+        "out": {
+          "type": "fade",
+          "easing": "ease-in",
+          "durationTicks": 64000
+        }
+      },
+      "background": null,
+      "fontFamily": "TikTok Sans",
+      "lineHeight": 1.25,
+      "strokeColor": "#000000",
+      "strokeWidth": 0,
+      "resizeOnEdit": false,
+      "letterSpacing": 0,
+      "isDraggingInTimeline": false,
+      "startTicks": 480000,
+      "durationTicks": 480000
+    },
+    "title-3": {
+      "id": "title-3",
+      "top": {
+        "value": 292,
+        "keyframes": []
+      },
+      "left": {
+        "value": 80,
+        "keyframes": []
+      },
+      "text": "Retention Improved",
+      "type": "text",
+      "align": "left",
+      "color": "#ffffff",
+      "width": {
+        "value": 840,
+        "keyframes": []
+      },
+      "height": {
+        "value": 120,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "fontSize": 72,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "direction": "ltr",
+      "fontStyle": {
+        "weight": "700",
+        "variant": "normal"
+      },
+      "animations": {
+        "in": {
+          "type": "slide-up",
+          "easing": "ease-out",
+          "durationTicks": 72000
+        },
+        "out": {
+          "type": "fade",
+          "easing": "ease-in",
+          "durationTicks": 64000
+        }
+      },
+      "background": null,
+      "fontFamily": "TikTok Sans",
+      "lineHeight": 1.25,
+      "strokeColor": "#000000",
+      "strokeWidth": 0,
+      "resizeOnEdit": false,
+      "letterSpacing": 0,
+      "isDraggingInTimeline": false,
+      "startTicks": 960000,
+      "durationTicks": 480000
+    },
+    "title-4": {
+      "id": "title-4",
+      "top": {
+        "value": 292,
+        "keyframes": []
+      },
+      "left": {
+        "value": 80,
+        "keyframes": []
+      },
+      "text": "Momentum Is Building",
+      "type": "text",
+      "align": "left",
+      "color": "#ffffff",
+      "width": {
+        "value": 840,
+        "keyframes": []
+      },
+      "height": {
+        "value": 120,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "fontSize": 72,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "direction": "ltr",
+      "fontStyle": {
+        "weight": "700",
+        "variant": "normal"
+      },
+      "animations": {
+        "in": {
+          "type": "slide-up",
+          "easing": "ease-out",
+          "durationTicks": 72000
+        },
+        "out": {
+          "type": "fade",
+          "easing": "ease-in",
+          "durationTicks": 64000
+        }
+      },
+      "background": null,
+      "fontFamily": "TikTok Sans",
+      "lineHeight": 1.25,
+      "strokeColor": "#000000",
+      "strokeWidth": 0,
+      "resizeOnEdit": false,
+      "letterSpacing": 0,
+      "isDraggingInTimeline": false,
+      "startTicks": 1440000,
+      "durationTicks": 600000
+    },
+    "title-5": {
+      "id": "title-5",
+      "top": {
+        "value": 394,
+        "keyframes": []
+      },
+      "left": {
+        "value": 280,
+        "keyframes": []
+      },
+      "text": "Ready for the Next Launch",
+      "type": "text",
+      "align": "center",
+      "color": "#ffffff",
+      "width": {
+        "value": 1360,
+        "keyframes": []
+      },
+      "height": {
+        "value": 160,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "fontSize": 76,
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "direction": "ltr",
+      "fontStyle": {
+        "weight": "700",
+        "variant": "normal"
+      },
+      "animations": {
+        "in": {
+          "type": "slide-up",
+          "easing": "ease-out",
+          "durationTicks": 72000
+        },
+        "out": {
+          "type": "fade",
+          "easing": "ease-in",
+          "durationTicks": 64000
+        }
+      },
+      "background": null,
+      "fontFamily": "TikTok Sans",
+      "lineHeight": 1.25,
+      "strokeColor": "#000000",
+      "strokeWidth": 0,
+      "resizeOnEdit": false,
+      "letterSpacing": 0,
+      "isDraggingInTimeline": false,
+      "startTicks": 2040000,
+      "durationTicks": 360000
+    },
+    "accent-1": {
+      "id": "accent-1",
+      "top": {
+        "value": 376,
+        "keyframes": []
+      },
+      "left": {
+        "value": 536,
+        "keyframes": []
+      },
+      "type": "solid",
+      "color": "#38bdf8",
+      "shape": "rectangle",
+      "width": {
+        "value": 72,
+        "keyframes": []
+      },
+      "height": {
+        "value": 5,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
       "rotation": {
         "value": 0,
         "keyframes": []
       },
       "animations": {
         "in": {
-          "type": "zoom-in",
-          "durationTicks": 80000,
-          "easing": "ease-out"
+          "type": "slide-right",
+          "easing": "ease-out",
+          "durationTicks": 72000
+        },
+        "out": {
+          "type": "fade",
+          "easing": "ease-in",
+          "durationTicks": 64000
         }
-      }
-    },
-    "item-title": {
-      "id": "item-title",
-      "type": "text",
+      },
+      "borderRadius": {
+        "value": 3,
+        "keyframes": []
+      },
+      "keepAspectRatio": false,
+      "isDraggingInTimeline": false,
       "startTicks": 0,
-      "durationTicks": 1680000,
+      "durationTicks": 480000
+    },
+    "accent-2": {
+      "id": "accent-2",
       "top": {
-        "value": 36,
+        "value": 274,
         "keyframes": []
       },
       "left": {
         "value": 80,
         "keyframes": []
       },
-      "width": {
-        "value": 760,
-        "keyframes": []
-      },
-      "height": {
-        "value": 90,
-        "keyframes": []
-      },
-      "scaleX": {
-        "value": 1,
-        "keyframes": []
-      },
-      "scaleY": {
-        "value": 1,
-        "keyframes": []
-      },
-      "opacity": {
-        "value": 1,
-        "keyframes": []
-      },
-      "isDraggingInTimeline": false,
-      "text": "Chart Showcase",
-      "color": "#ffffff",
-      "align": "left",
-      "fontFamily": "TikTok Sans",
-      "fontStyle": {
-        "variant": "normal",
-        "weight": "700"
-      },
-      "fontSize": 60,
-      "lineHeight": 1.1,
-      "letterSpacing": 0,
-      "resizeOnEdit": true,
-      "direction": "ltr",
-      "strokeWidth": 0,
-      "strokeColor": "#000000",
-      "background": null,
-      "rotation": {
-        "value": 0,
-        "keyframes": []
-      }
-    },
-    "item-note-line": {
-      "id": "item-note-line",
-      "type": "text",
-      "startTicks": 0,
-      "durationTicks": 560000,
-      "top": {
-        "value": 602,
-        "keyframes": []
-      },
-      "left": {
-        "value": 80,
-        "keyframes": []
-      },
-      "width": {
-        "value": 820,
-        "keyframes": []
-      },
-      "height": {
-        "value": 70,
-        "keyframes": []
-      },
-      "scaleX": {
-        "value": 1,
-        "keyframes": []
-      },
-      "scaleY": {
-        "value": 1,
-        "keyframes": []
-      },
-      "opacity": {
-        "value": 1,
-        "keyframes": []
-      },
-      "isDraggingInTimeline": false,
-      "text": "Use line charts for trend movement across time.",
-      "color": "#cbd5e1",
-      "align": "left",
-      "fontFamily": "TikTok Sans",
-      "fontStyle": {
-        "variant": "normal",
-        "weight": "500"
-      },
-      "fontSize": 24,
-      "lineHeight": 1.1,
-      "letterSpacing": 0,
-      "resizeOnEdit": true,
-      "direction": "ltr",
-      "strokeWidth": 0,
-      "strokeColor": "#000000",
-      "background": null,
-      "rotation": {
-        "value": 0,
-        "keyframes": []
-      }
-    },
-    "item-note-bar": {
-      "id": "item-note-bar",
-      "type": "text",
-      "startTicks": 560000,
-      "durationTicks": 560000,
-      "top": {
-        "value": 602,
-        "keyframes": []
-      },
-      "left": {
-        "value": 80,
-        "keyframes": []
-      },
-      "width": {
-        "value": 760,
-        "keyframes": []
-      },
-      "height": {
-        "value": 70,
-        "keyframes": []
-      },
-      "scaleX": {
-        "value": 1,
-        "keyframes": []
-      },
-      "scaleY": {
-        "value": 1,
-        "keyframes": []
-      },
-      "opacity": {
-        "value": 1,
-        "keyframes": []
-      },
-      "isDraggingInTimeline": false,
-      "text": "Use bar charts for side-by-side comparison.",
-      "color": "#cbd5e1",
-      "align": "left",
-      "fontFamily": "TikTok Sans",
-      "fontStyle": {
-        "variant": "normal",
-        "weight": "500"
-      },
-      "fontSize": 24,
-      "lineHeight": 1.1,
-      "letterSpacing": 0,
-      "resizeOnEdit": true,
-      "direction": "ltr",
-      "strokeWidth": 0,
-      "strokeColor": "#000000",
-      "background": null,
-      "rotation": {
-        "value": 0,
-        "keyframes": []
-      }
-    },
-    "item-note-pie": {
-      "id": "item-note-pie",
-      "type": "text",
-      "startTicks": 1120000,
-      "durationTicks": 560000,
-      "top": {
-        "value": 602,
-        "keyframes": []
-      },
-      "left": {
-        "value": 80,
-        "keyframes": []
-      },
-      "width": {
-        "value": 780,
-        "keyframes": []
-      },
-      "height": {
-        "value": 70,
-        "keyframes": []
-      },
-      "scaleX": {
-        "value": 1,
-        "keyframes": []
-      },
-      "scaleY": {
-        "value": 1,
-        "keyframes": []
-      },
-      "opacity": {
-        "value": 1,
-        "keyframes": []
-      },
-      "isDraggingInTimeline": false,
-      "text": "Use pie charts for share-of-total storytelling.",
-      "color": "#cbd5e1",
-      "align": "left",
-      "fontFamily": "TikTok Sans",
-      "fontStyle": {
-        "variant": "normal",
-        "weight": "500"
-      },
-      "fontSize": 24,
-      "lineHeight": 1.1,
-      "letterSpacing": 0,
-      "resizeOnEdit": true,
-      "direction": "ltr",
-      "strokeWidth": 0,
-      "strokeColor": "#000000",
-      "background": null,
-      "rotation": {
-        "value": 0,
-        "keyframes": []
-      }
-    },
-    "item-illustration": {
-      "id": "item-illustration",
-      "type": "illustration",
-      "startTicks": 0,
-      "durationTicks": 1680000,
-      "top": {
-        "value": 28,
-        "keyframes": []
-      },
-      "left": {
-        "value": 1040,
-        "keyframes": []
-      },
-      "width": {
-        "value": 160,
-        "keyframes": []
-      },
-      "height": {
-        "value": 160,
-        "keyframes": []
-      },
-      "scaleX": {
-        "value": 1,
-        "keyframes": []
-      },
-      "scaleY": {
-        "value": 1,
-        "keyframes": []
-      },
-      "opacity": {
-        "value": 1,
-        "keyframes": []
-      },
-      "isDraggingInTimeline": false,
-      "illustrationName": "IGrowthChart",
+      "type": "solid",
       "color": "#38bdf8",
-      "keepAspectRatio": true,
+      "shape": "rectangle",
+      "width": {
+        "value": 72,
+        "keyframes": []
+      },
+      "height": {
+        "value": 5,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
       "rotation": {
         "value": 0,
         "keyframes": []
-      }
-    },
-    "item-filter-bar": {
-      "id": "item-filter-bar",
-      "type": "filter",
-      "filterType": "verdant-glow",
-      "intensity": 1,
-      "startTicks": 560000,
-      "durationTicks": 560000,
+      },
+      "animations": {
+        "in": {
+          "type": "slide-right",
+          "easing": "ease-out",
+          "durationTicks": 72000
+        },
+        "out": {
+          "type": "fade",
+          "easing": "ease-in",
+          "durationTicks": 64000
+        }
+      },
+      "borderRadius": {
+        "value": 3,
+        "keyframes": []
+      },
+      "keepAspectRatio": false,
       "isDraggingInTimeline": false,
-      "params": {
-        "blend": 0.75
-      }
-    }
-  },
-  "transitions": {
-    "transition-line-bar": {
-      "id": "transition-line-bar",
-      "trackId": "track-charts",
-      "fromClipId": "item-chart-line",
-      "toClipId": "item-chart-bar",
-      "type": "slide",
-      "durationTicks": 64000,
-      "easing": "ease-in-out",
-      "params": {
-        "direction": "from-left"
-      }
+      "startTicks": 480000,
+      "durationTicks": 480000
     },
-    "transition-bar-pie": {
-      "id": "transition-bar-pie",
-      "trackId": "track-charts",
-      "fromClipId": "item-chart-bar",
-      "toClipId": "item-chart-pie",
-      "type": "iris",
-      "durationTicks": 64000,
-      "easing": "ease-in-out"
+    "accent-3": {
+      "id": "accent-3",
+      "top": {
+        "value": 274,
+        "keyframes": []
+      },
+      "left": {
+        "value": 80,
+        "keyframes": []
+      },
+      "type": "solid",
+      "color": "#38bdf8",
+      "shape": "rectangle",
+      "width": {
+        "value": 72,
+        "keyframes": []
+      },
+      "height": {
+        "value": 5,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "animations": {
+        "in": {
+          "type": "slide-right",
+          "easing": "ease-out",
+          "durationTicks": 72000
+        },
+        "out": {
+          "type": "fade",
+          "easing": "ease-in",
+          "durationTicks": 64000
+        }
+      },
+      "borderRadius": {
+        "value": 3,
+        "keyframes": []
+      },
+      "keepAspectRatio": false,
+      "isDraggingInTimeline": false,
+      "startTicks": 960000,
+      "durationTicks": 480000
+    },
+    "accent-4": {
+      "id": "accent-4",
+      "top": {
+        "value": 274,
+        "keyframes": []
+      },
+      "left": {
+        "value": 80,
+        "keyframes": []
+      },
+      "type": "solid",
+      "color": "#38bdf8",
+      "shape": "rectangle",
+      "width": {
+        "value": 72,
+        "keyframes": []
+      },
+      "height": {
+        "value": 5,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "animations": {
+        "in": {
+          "type": "slide-right",
+          "easing": "ease-out",
+          "durationTicks": 72000
+        },
+        "out": {
+          "type": "fade",
+          "easing": "ease-in",
+          "durationTicks": 64000
+        }
+      },
+      "borderRadius": {
+        "value": 3,
+        "keyframes": []
+      },
+      "keepAspectRatio": false,
+      "isDraggingInTimeline": false,
+      "startTicks": 1440000,
+      "durationTicks": 600000
+    },
+    "accent-5": {
+      "id": "accent-5",
+      "top": {
+        "value": 376,
+        "keyframes": []
+      },
+      "left": {
+        "value": 470,
+        "keyframes": []
+      },
+      "type": "solid",
+      "color": "#38bdf8",
+      "shape": "rectangle",
+      "width": {
+        "value": 72,
+        "keyframes": []
+      },
+      "height": {
+        "value": 5,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 1,
+        "keyframes": []
+      },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "animations": {
+        "in": {
+          "type": "slide-right",
+          "easing": "ease-out",
+          "durationTicks": 72000
+        },
+        "out": {
+          "type": "fade",
+          "easing": "ease-in",
+          "durationTicks": 64000
+        }
+      },
+      "borderRadius": {
+        "value": 3,
+        "keyframes": []
+      },
+      "keepAspectRatio": false,
+      "isDraggingInTimeline": false,
+      "startTicks": 2040000,
+      "durationTicks": 360000
+    },
+    "overlay-main": {
+      "id": "overlay-main",
+      "top": {
+        "value": 0,
+        "keyframes": []
+      },
+      "left": {
+        "value": 0,
+        "keyframes": []
+      },
+      "type": "solid",
+      "color": "#050d1a",
+      "shape": "rectangle",
+      "width": {
+        "value": 1920,
+        "keyframes": []
+      },
+      "height": {
+        "value": 1080,
+        "keyframes": []
+      },
+      "scaleX": {
+        "value": 1,
+        "keyframes": []
+      },
+      "scaleY": {
+        "value": 1,
+        "keyframes": []
+      },
+      "opacity": {
+        "value": 0.68,
+        "keyframes": []
+      },
+      "rotation": {
+        "value": 0,
+        "keyframes": []
+      },
+      "borderRadius": {
+        "value": 0,
+        "keyframes": []
+      },
+      "keepAspectRatio": false,
+      "isDraggingInTimeline": false,
+      "startTicks": 0,
+      "durationTicks": 2400000
     }
   },
-  "globalBackground": {
-    "type": "color",
-    "color": "#0f172a",
-    "gradient": "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)"
-  }
+  "transitions": {},
+  "deletedAssets": []
 }

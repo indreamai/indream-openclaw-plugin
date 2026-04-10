@@ -29,7 +29,14 @@
     },
     "outputRatio": {
       "type": "string",
-      "enum": ["16:9", "9:16", "1:1", "4:3", "3:4", "custom"]
+      "enum": [
+        "16:9",
+        "9:16",
+        "1:1",
+        "4:3",
+        "3:4",
+        "custom"
+      ]
     },
     "tracks": {
       "type": "array",
@@ -124,8 +131,7 @@
     "deletedAssets": {
       "type": "array",
       "items": {
-        "type": "object",
-        "additionalProperties": true
+        "$ref": "#/definitions/deletedAssetEntry"
       }
     }
   },
@@ -146,7 +152,13 @@
     },
     "baseAsset": {
       "type": "object",
-      "required": ["id", "type", "filename", "size", "mimeType"],
+      "required": [
+        "id",
+        "type",
+        "filename",
+        "size",
+        "mimeType"
+      ],
       "properties": {
         "id": {
           "type": "string",
@@ -164,10 +176,16 @@
           "minimum": 0
         },
         "remoteUrl": {
-          "type": ["string", "null"]
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "remoteKey": {
-          "type": ["string", "null"]
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "mimeType": {
           "type": "string",
@@ -183,7 +201,11 @@
         },
         {
           "type": "object",
-          "required": ["type", "width", "height"],
+          "required": [
+            "type",
+            "width",
+            "height"
+          ],
           "properties": {
             "type": {
               "const": "image"
@@ -207,7 +229,13 @@
         },
         {
           "type": "object",
-          "required": ["type", "durationInSeconds", "hasAudioTrack", "width", "height"],
+          "required": [
+            "type",
+            "durationInSeconds",
+            "hasAudioTrack",
+            "width",
+            "height"
+          ],
           "properties": {
             "type": {
               "const": "video"
@@ -238,7 +266,13 @@
         },
         {
           "type": "object",
-          "required": ["type", "durationInSeconds", "width", "height", "loopBehavior"],
+          "required": [
+            "type",
+            "durationInSeconds",
+            "width",
+            "height",
+            "loopBehavior"
+          ],
           "properties": {
             "type": {
               "const": "gif"
@@ -257,7 +291,10 @@
             },
             "loopBehavior": {
               "type": "string",
-              "enum": ["finite", "loop"]
+              "enum": [
+                "finite",
+                "loop"
+              ]
             }
           }
         }
@@ -270,7 +307,10 @@
         },
         {
           "type": "object",
-          "required": ["type", "durationInSeconds"],
+          "required": [
+            "type",
+            "durationInSeconds"
+          ],
           "properties": {
             "type": {
               "const": "audio"
@@ -315,17 +355,29 @@
             },
             "resourceType": {
               "type": "string",
-              "enum": ["lottie", "svg"]
+              "enum": [
+                "lottie",
+                "svg"
+              ]
             },
             "resourceJson": {
-              "type": ["object", "null"],
+              "type": [
+                "object",
+                "null"
+              ],
               "additionalProperties": true
             },
             "resourceComponentId": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             },
             "materialConfig": {
-              "type": ["object", "null"],
+              "type": [
+                "object",
+                "null"
+              ],
               "additionalProperties": true
             }
           }
@@ -339,7 +391,11 @@
         },
         {
           "type": "object",
-          "required": ["type", "captions", "timingGranularity"],
+          "required": [
+            "type",
+            "captions",
+            "timingGranularity"
+          ],
           "properties": {
             "type": {
               "const": "caption"
@@ -347,13 +403,15 @@
             "captions": {
               "type": "array",
               "items": {
-                "type": "object",
-                "additionalProperties": true
+                "$ref": "#/definitions/captionEntry"
               }
             },
             "timingGranularity": {
               "type": "string",
-              "enum": ["word", "line"]
+              "enum": [
+                "word",
+                "line"
+              ]
             }
           }
         }
@@ -361,7 +419,13 @@
     },
     "track": {
       "type": "object",
-      "required": ["id", "items", "hidden", "muted"],
+      "description": "One timeline track. Items in the same track must not overlap in time, but may touch end-to-start.",
+      "required": [
+        "id",
+        "items",
+        "hidden",
+        "muted"
+      ],
       "properties": {
         "id": {
           "type": "string",
@@ -369,6 +433,7 @@
         },
         "items": {
           "type": "array",
+          "description": "Ordered item ids for a single track. Same-track items cannot overlap in time.",
           "items": {
             "type": "string",
             "minLength": 1
@@ -381,15 +446,26 @@
           "type": "boolean"
         }
       },
-      "additionalProperties": true
+      "additionalProperties": false
     },
     "animationSpec": {
       "type": "object",
-      "required": ["type", "durationTicks"],
+      "required": [
+        "type",
+        "durationTicks"
+      ],
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["fade", "slide-up", "slide-down", "slide-left", "slide-right", "zoom-in", "zoom-out"]
+          "enum": [
+            "fade",
+            "slide-up",
+            "slide-down",
+            "slide-left",
+            "slide-right",
+            "zoom-in",
+            "zoom-out"
+          ]
         },
         "durationTicks": {
           "type": "integer",
@@ -397,7 +473,12 @@
         },
         "easing": {
           "type": "string",
-          "enum": ["linear", "ease-in", "ease-out", "ease-in-out"]
+          "enum": [
+            "linear",
+            "ease-in",
+            "ease-out",
+            "ease-in-out"
+          ]
         },
         "params": {
           "type": "object",
@@ -406,7 +487,7 @@
           }
         }
       },
-      "additionalProperties": true
+      "additionalProperties": false
     },
     "clipAnimations": {
       "type": "object",
@@ -422,7 +503,10 @@
     },
     "captionAnimationSpec": {
       "type": "object",
-      "required": ["type", "durationTicks"],
+      "required": [
+        "type",
+        "durationTicks"
+      ],
       "properties": {
         "type": {
           "type": "string",
@@ -444,7 +528,12 @@
         },
         "easing": {
           "type": "string",
-          "enum": ["linear", "ease-in", "ease-out", "ease-in-out"]
+          "enum": [
+            "linear",
+            "ease-in",
+            "ease-out",
+            "ease-in-out"
+          ]
         },
         "params": {
           "type": "object",
@@ -453,7 +542,7 @@
           }
         }
       },
-      "additionalProperties": true
+      "additionalProperties": false
     },
     "captionClipAnimations": {
       "type": "object",
@@ -472,11 +561,15 @@
     },
     "keyframePoint": {
       "type": "object",
-      "required": ["timeTicks", "value"],
+      "required": [
+        "timeTicks",
+        "value"
+      ],
       "properties": {
         "timeTicks": {
           "type": "integer",
-          "minimum": 0
+          "minimum": 0,
+          "description": "Local clip time in ticks. Service-level semantic validation requires timeTicks < item.durationTicks."
         },
         "value": {
           "type": "number"
@@ -486,13 +579,17 @@
     },
     "animatedNumberTrack": {
       "type": "object",
-      "required": ["value", "keyframes"],
+      "required": [
+        "value",
+        "keyframes"
+      ],
       "properties": {
         "value": {
           "type": "number"
         },
         "keyframes": {
           "type": "array",
+          "description": "Keyframes are expressed in local clip ticks and must stay inside the clip range.",
           "items": {
             "$ref": "#/definitions/keyframePoint"
           }
@@ -584,7 +681,13 @@
         },
         {
           "type": "object",
-          "required": ["type", "assetId", "keepAspectRatio", "borderRadius", "rotation"],
+          "required": [
+            "type",
+            "assetId",
+            "keepAspectRatio",
+            "borderRadius",
+            "rotation"
+          ],
           "properties": {
             "type": {
               "const": "image"
@@ -594,11 +697,17 @@
               "minLength": 1
             },
             "stickerId": {
-              "type": ["string", "null"],
+              "type": [
+                "string",
+                "null"
+              ],
               "minLength": 1
             },
             "stickerVersion": {
-              "type": ["integer", "null"],
+              "type": [
+                "integer",
+                "null"
+              ],
               "minimum": 1
             },
             "keepAspectRatio": {
@@ -888,23 +997,17 @@
             },
             "align": {
               "type": "string",
-              "enum": ["left", "center", "right"]
+              "enum": [
+                "left",
+                "center",
+                "right"
+              ]
             },
             "fontFamily": {
               "type": "string"
             },
             "fontStyle": {
-              "type": "object",
-              "required": ["variant", "weight"],
-              "properties": {
-                "variant": {
-                  "type": "string"
-                },
-                "weight": {
-                  "type": "string"
-                }
-              },
-              "additionalProperties": true
+              "$ref": "#/definitions/fontStyle"
             },
             "fontSize": {
               "type": "number",
@@ -922,7 +1025,10 @@
             },
             "direction": {
               "type": "string",
-              "enum": ["ltr", "rtl"]
+              "enum": [
+                "ltr",
+                "rtl"
+              ]
             },
             "strokeWidth": {
               "type": "number",
@@ -937,22 +1043,7 @@
                   "type": "null"
                 },
                 {
-                  "type": "object",
-                  "required": ["color", "horizontalPadding", "borderRadius"],
-                  "properties": {
-                    "color": {
-                      "type": "string"
-                    },
-                    "horizontalPadding": {
-                      "type": "number",
-                      "minimum": 0
-                    },
-                    "borderRadius": {
-                      "type": "number",
-                      "minimum": 0
-                    }
-                  },
-                  "additionalProperties": true
+                  "$ref": "#/definitions/textBackground"
                 }
               ]
             },
@@ -976,7 +1067,13 @@
         },
         {
           "type": "object",
-          "required": ["type", "schemaVersion", "templateId", "templateCategory", "nodes"],
+          "required": [
+            "type",
+            "schemaVersion",
+            "templateId",
+            "templateCategory",
+            "nodes"
+          ],
           "properties": {
             "type": {
               "const": "text-template"
@@ -995,15 +1092,14 @@
               "type": "array",
               "minItems": 2,
               "items": {
-                "type": "object",
-                "required": ["type"],
-                "properties": {
-                  "type": {
-                    "type": "string",
-                    "enum": ["image", "text"]
+                "oneOf": [
+                  {
+                    "$ref": "#/definitions/textTemplateImageNode"
+                  },
+                  {
+                    "$ref": "#/definitions/textTemplateTextNode"
                   }
-                },
-                "additionalProperties": true
+                ]
               }
             },
             "rotation": {
@@ -1038,8 +1134,8 @@
             "strokeColor",
             "direction",
             "pageDurationInMilliseconds",
-            "captionStartInSeconds",
             "maxLines",
+            "contentStartOffsetMs",
             "source",
             "captionGroupId",
             "background"
@@ -1055,17 +1151,7 @@
               "type": "string"
             },
             "fontStyle": {
-              "type": "object",
-              "required": ["variant", "weight"],
-              "properties": {
-                "variant": {
-                  "type": "string"
-                },
-                "weight": {
-                  "type": "string"
-                }
-              },
-              "additionalProperties": true
+              "$ref": "#/definitions/fontStyle"
             },
             "lineHeight": {
               "type": "number",
@@ -1080,7 +1166,11 @@
             },
             "align": {
               "type": "string",
-              "enum": ["left", "center", "right"]
+              "enum": [
+                "left",
+                "center",
+                "right"
+              ]
             },
             "color": {
               "type": "string"
@@ -1097,26 +1187,36 @@
             },
             "direction": {
               "type": "string",
-              "enum": ["ltr", "rtl"]
+              "enum": [
+                "ltr",
+                "rtl"
+              ]
             },
             "pageDurationInMilliseconds": {
               "type": "number",
               "minimum": 1
             },
-            "captionStartInSeconds": {
-              "type": "number",
-              "minimum": 0
-            },
             "maxLines": {
               "type": "integer",
               "minimum": 1
             },
+            "contentStartOffsetMs": {
+              "type": "number",
+              "minimum": 0
+            },
             "source": {
               "type": "string",
-              "enum": ["manual", "auto", "upload"]
+              "enum": [
+                "manual",
+                "auto",
+                "upload"
+              ]
             },
             "captionGroupId": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             },
             "background": {
               "oneOf": [
@@ -1124,22 +1224,7 @@
                   "type": "null"
                 },
                 {
-                  "type": "object",
-                  "required": ["color", "horizontalPadding", "borderRadius"],
-                  "properties": {
-                    "color": {
-                      "type": "string"
-                    },
-                    "horizontalPadding": {
-                      "type": "number",
-                      "minimum": 0
-                    },
-                    "borderRadius": {
-                      "type": "number",
-                      "minimum": 0
-                    }
-                  },
-                  "additionalProperties": true
+                  "$ref": "#/definitions/textBackground"
                 }
               ]
             },
@@ -1163,7 +1248,14 @@
         },
         {
           "type": "object",
-          "required": ["type", "color", "shape", "keepAspectRatio", "borderRadius", "rotation"],
+          "required": [
+            "type",
+            "color",
+            "shape",
+            "keepAspectRatio",
+            "borderRadius",
+            "rotation"
+          ],
           "properties": {
             "type": {
               "const": "solid"
@@ -1173,7 +1265,12 @@
             },
             "shape": {
               "type": "string",
-              "enum": ["rectangle", "circle", "triangle", "star"]
+              "enum": [
+                "rectangle",
+                "circle",
+                "triangle",
+                "star"
+              ]
             },
             "keepAspectRatio": {
               "type": "boolean"
@@ -1236,14 +1333,24 @@
         },
         {
           "type": "object",
-          "required": ["type", "effectType", "intensity"],
+          "required": [
+            "type",
+            "effectType",
+            "intensity"
+          ],
           "properties": {
             "type": {
               "const": "effect"
             },
             "effectType": {
               "type": "string",
-              "enum": ["flash-to-black", "blur", "blurred-opening", "fade-in", "fade-out"]
+              "enum": [
+                "flash-to-black",
+                "blur",
+                "blurred-opening",
+                "fade-in",
+                "fade-out"
+              ]
             },
             "intensity": {
               "type": "number",
@@ -1266,7 +1373,11 @@
         },
         {
           "type": "object",
-          "required": ["type", "filterType", "intensity"],
+          "required": [
+            "type",
+            "filterType",
+            "intensity"
+          ],
           "properties": {
             "type": {
               "const": "filter"
@@ -1304,50 +1415,255 @@
           "$ref": "#/definitions/baseItem"
         },
         {
-          "type": "object",
-          "required": [
-            "type",
-            "chartType",
-            "themeColor",
-            "data",
-            "animationDurationTicks",
-            "keepAspectRatio",
-            "rotation"
-          ],
-          "properties": {
-            "type": {
-              "const": "chart"
-            },
-            "chartType": {
-              "type": "string"
-            },
-            "themeColor": {
-              "type": "string"
-            },
-            "data": {
+          "oneOf": [
+            {
               "type": "object",
-              "additionalProperties": true
+              "required": [
+                "type",
+                "chartType",
+                "themeColor",
+                "data",
+                "animationDurationTicks",
+                "keepAspectRatio",
+                "rotation"
+              ],
+              "properties": {
+                "type": {
+                  "const": "chart"
+                },
+                "chartType": {
+                  "const": "line"
+                },
+                "themeColor": {
+                  "type": "string"
+                },
+                "data": {
+                  "$ref": "#/definitions/chartXYData"
+                },
+                "animationDurationTicks": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "keepAspectRatio": {
+                  "type": "boolean"
+                },
+                "rotation": {
+                  "$ref": "#/definitions/animatedNumberTrack"
+                },
+                "animations": {
+                  "$ref": "#/definitions/clipAnimations"
+                }
+              }
             },
-            "animationDurationTicks": {
-              "type": "integer",
-              "minimum": 0
+            {
+              "type": "object",
+              "required": [
+                "type",
+                "chartType",
+                "themeColor",
+                "data",
+                "animationDurationTicks",
+                "keepAspectRatio",
+                "rotation"
+              ],
+              "properties": {
+                "type": {
+                  "const": "chart"
+                },
+                "chartType": {
+                  "const": "bar"
+                },
+                "themeColor": {
+                  "type": "string"
+                },
+                "data": {
+                  "$ref": "#/definitions/chartXYData"
+                },
+                "animationDurationTicks": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "keepAspectRatio": {
+                  "type": "boolean"
+                },
+                "rotation": {
+                  "$ref": "#/definitions/animatedNumberTrack"
+                },
+                "animations": {
+                  "$ref": "#/definitions/clipAnimations"
+                }
+              }
             },
-            "keepAspectRatio": {
-              "type": "boolean"
+            {
+              "type": "object",
+              "required": [
+                "type",
+                "chartType",
+                "themeColor",
+                "data",
+                "animationDurationTicks",
+                "keepAspectRatio",
+                "rotation"
+              ],
+              "properties": {
+                "type": {
+                  "const": "chart"
+                },
+                "chartType": {
+                  "const": "area"
+                },
+                "themeColor": {
+                  "type": "string"
+                },
+                "data": {
+                  "$ref": "#/definitions/chartXYData"
+                },
+                "animationDurationTicks": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "keepAspectRatio": {
+                  "type": "boolean"
+                },
+                "rotation": {
+                  "$ref": "#/definitions/animatedNumberTrack"
+                },
+                "animations": {
+                  "$ref": "#/definitions/clipAnimations"
+                }
+              }
             },
-            "rotation": {
-              "$ref": "#/definitions/animatedNumberTrack"
+            {
+              "type": "object",
+              "required": [
+                "type",
+                "chartType",
+                "themeColor",
+                "data",
+                "animationDurationTicks",
+                "keepAspectRatio",
+                "rotation"
+              ],
+              "properties": {
+                "type": {
+                  "const": "chart"
+                },
+                "chartType": {
+                  "const": "pie"
+                },
+                "themeColor": {
+                  "type": "string"
+                },
+                "data": {
+                  "$ref": "#/definitions/chartPieData"
+                },
+                "animationDurationTicks": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "keepAspectRatio": {
+                  "type": "boolean"
+                },
+                "rotation": {
+                  "$ref": "#/definitions/animatedNumberTrack"
+                },
+                "animations": {
+                  "$ref": "#/definitions/clipAnimations"
+                }
+              }
             },
-            "animations": {
-              "$ref": "#/definitions/clipAnimations"
+            {
+              "type": "object",
+              "required": [
+                "type",
+                "chartType",
+                "themeColor",
+                "data",
+                "animationDurationTicks",
+                "keepAspectRatio",
+                "rotation"
+              ],
+              "properties": {
+                "type": {
+                  "const": "chart"
+                },
+                "chartType": {
+                  "const": "radar"
+                },
+                "themeColor": {
+                  "type": "string"
+                },
+                "data": {
+                  "$ref": "#/definitions/chartXYData"
+                },
+                "animationDurationTicks": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "keepAspectRatio": {
+                  "type": "boolean"
+                },
+                "rotation": {
+                  "$ref": "#/definitions/animatedNumberTrack"
+                },
+                "animations": {
+                  "$ref": "#/definitions/clipAnimations"
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "type",
+                "chartType",
+                "themeColor",
+                "data",
+                "animationDurationTicks",
+                "keepAspectRatio",
+                "rotation"
+              ],
+              "properties": {
+                "type": {
+                  "const": "chart"
+                },
+                "chartType": {
+                  "const": "scatter"
+                },
+                "themeColor": {
+                  "type": "string"
+                },
+                "data": {
+                  "$ref": "#/definitions/chartScatterData"
+                },
+                "animationDurationTicks": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "keepAspectRatio": {
+                  "type": "boolean"
+                },
+                "rotation": {
+                  "$ref": "#/definitions/animatedNumberTrack"
+                },
+                "animations": {
+                  "$ref": "#/definitions/clipAnimations"
+                }
+              }
             }
-          }
+          ]
         }
       ]
     },
     "transition": {
       "type": "object",
-      "required": ["id", "trackId", "fromClipId", "toClipId", "type", "durationTicks"],
+      "required": [
+        "id",
+        "trackId",
+        "fromClipId",
+        "toClipId",
+        "type",
+        "durationTicks"
+      ],
       "properties": {
         "id": {
           "type": "string",
@@ -1367,7 +1683,14 @@
         },
         "type": {
           "type": "string",
-          "enum": ["fade", "slide", "wipe", "flip", "clock-wipe", "iris"]
+          "enum": [
+            "fade",
+            "slide",
+            "wipe",
+            "flip",
+            "clock-wipe",
+            "iris"
+          ]
         },
         "durationTicks": {
           "type": "integer",
@@ -1375,7 +1698,12 @@
         },
         "easing": {
           "type": "string",
-          "enum": ["linear", "ease-in", "ease-out", "ease-in-out"]
+          "enum": [
+            "linear",
+            "ease-in",
+            "ease-out",
+            "ease-in-out"
+          ]
         },
         "params": {
           "type": "object",
@@ -1384,13 +1712,15 @@
           }
         }
       },
-      "additionalProperties": true
+      "additionalProperties": false
     },
     "globalBackground": {
       "oneOf": [
         {
           "type": "object",
-          "required": ["type"],
+          "required": [
+            "type"
+          ],
           "properties": {
             "type": {
               "const": "none"
@@ -1400,7 +1730,11 @@
         },
         {
           "type": "object",
-          "required": ["type", "color", "gradient"],
+          "required": [
+            "type",
+            "color",
+            "gradient"
+          ],
           "properties": {
             "type": {
               "const": "color"
@@ -1409,34 +1743,54 @@
               "type": "string"
             },
             "gradient": {
-              "type": ["string", "null"]
-            }
-          },
-          "additionalProperties": true
-        },
-        {
-          "type": "object",
-          "required": ["type", "level"],
-          "properties": {
-            "type": {
-              "const": "blur"
-            },
-            "level": {
-              "type": "integer",
-              "enum": [0, 1, 2, 3, 4]
+              "type": [
+                "string",
+                "null"
+              ]
             }
           },
           "additionalProperties": false
         },
         {
           "type": "object",
-          "required": ["type", "imageAssetId", "imageUrl", "source"],
+          "required": [
+            "type",
+            "level"
+          ],
+          "properties": {
+            "type": {
+              "const": "blur"
+            },
+            "level": {
+              "type": "integer",
+              "enum": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "imageAssetId",
+            "imageUrl",
+            "source"
+          ],
           "properties": {
             "type": {
               "const": "image"
             },
             "imageAssetId": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             },
             "imageUrl": {
               "type": "string",
@@ -1444,48 +1798,592 @@
             },
             "source": {
               "type": "string",
-              "enum": ["preset", "custom"]
+              "enum": [
+                "preset",
+                "custom"
+              ]
             }
           },
-          "additionalProperties": true
+          "additionalProperties": false
         }
       ]
     },
     "brandRuntime": {
-      "type": ["object", "null"],
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "required": [
+            "brandId",
+            "logoX",
+            "logoY",
+            "managedItemIds",
+            "managedAssetIds",
+            "introShiftInFrames",
+            "overlayTrackId",
+            "underlayTrackId"
+          ],
+          "properties": {
+            "brandId": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "logoX": {
+              "type": "number"
+            },
+            "logoY": {
+              "type": "number"
+            },
+            "managedItemIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "managedAssetIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "introShiftInFrames": {
+              "type": "integer"
+            },
+            "overlayTrackId": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "underlayTrackId": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "fontStyle": {
+      "type": "object",
+      "required": [
+        "variant",
+        "weight"
+      ],
       "properties": {
-        "brandId": {
-          "type": ["string", "null"]
+        "variant": {
+          "type": "string"
         },
-        "logoX": {
-          "type": "number"
-        },
-        "logoY": {
-          "type": "number"
-        },
-        "managedItemIds": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "managedAssetIds": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "introShiftInFrames": {
-          "type": "integer"
-        },
-        "overlayTrackId": {
-          "type": ["string", "null"]
-        },
-        "underlayTrackId": {
-          "type": ["string", "null"]
+        "weight": {
+          "type": "string"
         }
       },
-      "additionalProperties": true
+      "additionalProperties": false
+    },
+    "textBackground": {
+      "type": "object",
+      "required": [
+        "color",
+        "horizontalPadding",
+        "borderRadius"
+      ],
+      "properties": {
+        "color": {
+          "type": "string"
+        },
+        "horizontalPadding": {
+          "type": "number",
+          "minimum": 0
+        },
+        "borderRadius": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "captionEntry": {
+      "type": "object",
+      "required": [
+        "text",
+        "startMs",
+        "endMs"
+      ],
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "startMs": {
+          "type": "number",
+          "minimum": 0
+        },
+        "endMs": {
+          "type": "number",
+          "minimum": 0
+        },
+        "timestampMs": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "confidence": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "assetUploadProgress": {
+      "type": "object",
+      "required": [
+        "progress",
+        "loadedBytes",
+        "totalBytes"
+      ],
+      "properties": {
+        "progress": {
+          "type": "number"
+        },
+        "loadedBytes": {
+          "type": "number",
+          "minimum": 0
+        },
+        "totalBytes": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "assetUploadState": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "type": {
+              "const": "pending-upload"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "progress"
+          ],
+          "properties": {
+            "type": {
+              "const": "in-progress"
+            },
+            "progress": {
+              "$ref": "#/definitions/assetUploadProgress"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "type": {
+              "const": "uploaded"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "error",
+            "canRetry"
+          ],
+          "properties": {
+            "type": {
+              "const": "error"
+            },
+            "error": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              ]
+            },
+            "canRetry": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "deletedAssetEntry": {
+      "type": "object",
+      "required": [
+        "assetId",
+        "remoteUrl",
+        "remoteKey",
+        "statusAtDeletion"
+      ],
+      "properties": {
+        "assetId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "remoteUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "remoteKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "statusAtDeletion": {
+          "$ref": "#/definitions/assetUploadState"
+        }
+      },
+      "additionalProperties": false
+    },
+    "textTemplateImageNode": {
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "imageType",
+        "imageComponentId",
+        "imageLottieJson",
+        "x",
+        "y",
+        "width",
+        "height",
+        "opacity"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "const": "image"
+        },
+        "imageType": {
+          "type": "string",
+          "enum": [
+            "svg",
+            "lottie"
+          ]
+        },
+        "imageComponentId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "imageLottieJson": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": true
+        },
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "width": {
+          "type": "number"
+        },
+        "height": {
+          "type": "number"
+        },
+        "opacity": {
+          "type": "number"
+        },
+        "animations": {
+          "$ref": "#/definitions/clipAnimations"
+        }
+      },
+      "additionalProperties": false
+    },
+    "textTemplateTextNode": {
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "x",
+        "y",
+        "width",
+        "height",
+        "text",
+        "color",
+        "align",
+        "fontFamily",
+        "fontStyle",
+        "fontSize",
+        "lineHeight",
+        "letterSpacing",
+        "direction",
+        "strokeWidth",
+        "strokeColor",
+        "background"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "const": "text"
+        },
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "width": {
+          "type": "number"
+        },
+        "height": {
+          "type": "number"
+        },
+        "text": {
+          "type": "string"
+        },
+        "color": {
+          "type": "string"
+        },
+        "align": {
+          "type": "string",
+          "enum": [
+            "left",
+            "center",
+            "right"
+          ]
+        },
+        "fontFamily": {
+          "type": "string"
+        },
+        "fontStyle": {
+          "$ref": "#/definitions/fontStyle"
+        },
+        "fontSize": {
+          "type": "number",
+          "minimum": 1
+        },
+        "lineHeight": {
+          "type": "number",
+          "minimum": 0
+        },
+        "letterSpacing": {
+          "type": "number"
+        },
+        "direction": {
+          "type": "string",
+          "enum": [
+            "ltr",
+            "rtl"
+          ]
+        },
+        "strokeWidth": {
+          "type": "number",
+          "minimum": 0
+        },
+        "strokeColor": {
+          "type": "string"
+        },
+        "background": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/textBackground"
+            }
+          ]
+        },
+        "animations": {
+          "$ref": "#/definitions/clipAnimations"
+        },
+        "captionAnimations": {
+          "$ref": "#/definitions/captionClipAnimations"
+        }
+      },
+      "additionalProperties": false
+    },
+    "chartSeries": {
+      "type": "object",
+      "required": [
+        "key",
+        "label"
+      ],
+      "properties": {
+        "key": {
+          "type": "string",
+          "minLength": 1
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "chartRowValues": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "number"
+      }
+    },
+    "chartXYRow": {
+      "type": "object",
+      "required": [
+        "label",
+        "values"
+      ],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "values": {
+          "$ref": "#/definitions/chartRowValues"
+        }
+      },
+      "additionalProperties": false
+    },
+    "chartXYData": {
+      "type": "object",
+      "required": [
+        "series",
+        "rows"
+      ],
+      "properties": {
+        "series": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/chartSeries"
+          }
+        },
+        "rows": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/chartXYRow"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "chartPieSlice": {
+      "type": "object",
+      "required": [
+        "label",
+        "value"
+      ],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "chartPieData": {
+      "type": "object",
+      "required": [
+        "slices"
+      ],
+      "properties": {
+        "slices": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/chartPieSlice"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "chartScatterPoint": {
+      "type": "object",
+      "required": [
+        "seriesKey",
+        "x",
+        "y"
+      ],
+      "properties": {
+        "seriesKey": {
+          "type": "string",
+          "minLength": 1
+        },
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "chartScatterData": {
+      "type": "object",
+      "required": [
+        "series",
+        "points"
+      ],
+      "properties": {
+        "series": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/chartSeries"
+          }
+        },
+        "points": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/chartScatterPoint"
+          }
+        }
+      },
+      "additionalProperties": false
     }
   }
 }
