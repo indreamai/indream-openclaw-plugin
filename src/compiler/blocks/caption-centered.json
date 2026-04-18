@@ -1,0 +1,53 @@
+{
+  "$id": "block:caption-centered",
+  "description": "Captions centered with media background. Used for speech-edit / narration scenes.",
+  "supportedRatios": ["16:9", "9:16", "1:1", "4:3", "3:4"],
+  "requiredSlots": ["primary", "captions"],
+  "optionalSlots": [],
+  "overridableFields": ["accentColor", "overlayOpacity"],
+  "defaults": {
+    "accentColor": "#ffffff",
+    "overlayOpacity": 0.5
+  },
+  "skeleton": {
+    "tracks": {
+      "{sceneId}-media": [
+        {
+          "id": "{sceneId}-bg",
+          "type": "video",
+          "startMs": 0,
+          "durationMs": "{durationMs}",
+          "asset": "{slot:primary}",
+          "size": { "width": "{compositionWidth}", "height": "{compositionHeight}" },
+          "position": { "x": 0, "y": 0 },
+          "zIndex": 0
+        }
+      ],
+      "{sceneId}-overlay": [
+        {
+          "id": "{sceneId}-overlay",
+          "type": "solid",
+          "startMs": 0,
+          "durationMs": "{durationMs}",
+          "color": "#000000",
+          "opacity": "{overlayOpacity}",
+          "size": { "width": "{compositionWidth}", "height": "{compositionHeight}" },
+          "position": { "x": 0, "y": 0 },
+          "zIndex": 1
+        }
+      ],
+      "{sceneId}-captions": [
+        {
+          "id": "{sceneId}-captions",
+          "type": "caption",
+          "startMs": 0,
+          "durationMs": "{durationMs}",
+          "asset": "{slot:captions}",
+          "size": { "width": 0.8, "height": 300 },
+          "position": { "x": 0.1, "y": 0.65 },
+          "zIndex": 3
+        }
+      ]
+    }
+  }
+}

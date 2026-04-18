@@ -1,0 +1,76 @@
+{
+  "$id": "block:compare-split",
+  "description": "Before/after or A/B comparison with two media panels and labels. 16:9 / 1:1.",
+  "supportedRatios": ["16:9", "1:1", "4:3"],
+  "requiredSlots": ["left", "right"],
+  "optionalSlots": [],
+  "overridableFields": ["leftLabel", "rightLabel", "accentColor", "bgColor"],
+  "defaults": {
+    "leftLabel": "Before",
+    "rightLabel": "After",
+    "accentColor": "#ffffff",
+    "bgColor": "#0a0a0a"
+  },
+  "skeleton": {
+    "tracks": {
+      "{sceneId}-bg": [
+        {
+          "id": "{sceneId}-bg",
+          "type": "solid",
+          "startMs": 0,
+          "durationMs": "{durationMs}",
+          "color": "{bgColor}",
+          "size": { "width": "{compositionWidth}", "height": "{compositionHeight}" },
+          "position": { "x": 0, "y": 0 },
+          "zIndex": 0
+        }
+      ],
+      "{sceneId}-media": [
+        {
+          "id": "{sceneId}-left",
+          "type": "image",
+          "startMs": 0,
+          "durationMs": "{durationMs}",
+          "asset": "{slot:left}",
+          "size": { "width": 0.48, "height": 0.78 },
+          "position": { "x": 0.01, "y": 0.11 },
+          "zIndex": 1,
+          "animation": { "in": "slide-right" }
+        },
+        {
+          "id": "{sceneId}-right",
+          "type": "image",
+          "startMs": 0,
+          "durationMs": "{durationMs}",
+          "asset": "{slot:right}",
+          "size": { "width": 0.48, "height": 0.78 },
+          "position": { "x": 0.51, "y": 0.11 },
+          "zIndex": 1,
+          "animation": { "in": "slide-left" }
+        }
+      ],
+      "{sceneId}-labels": [
+        {
+          "id": "{sceneId}-llabel",
+          "type": "text",
+          "startMs": 60,
+          "durationMs": "{durationMs}",
+          "text": { "content": "{leftLabel}", "fontWeight": 600, "fontSize": 48, "color": "{accentColor}", "align": "center" },
+          "size": { "width": 0.46, "height": 80 },
+          "position": { "x": 0.02, "y": 0.9 },
+          "zIndex": 3
+        },
+        {
+          "id": "{sceneId}-rlabel",
+          "type": "text",
+          "startMs": 60,
+          "durationMs": "{durationMs}",
+          "text": { "content": "{rightLabel}", "fontWeight": 600, "fontSize": 48, "color": "{accentColor}", "align": "center" },
+          "size": { "width": 0.46, "height": 80 },
+          "position": { "x": 0.52, "y": 0.9 },
+          "zIndex": 3
+        }
+      ]
+    }
+  }
+}

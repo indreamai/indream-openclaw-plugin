@@ -9,8 +9,11 @@ importers:
   .:
     dependencies:
       '@indreamai/client':
-        specifier: ^0.3.0
-        version: 0.3.0
+        specifier: ^1.0.0
+        version: 1.0.0
+      '@remotion/layout-utils':
+        specifier: 4.0.431
+        version: 4.0.431
       '@sinclair/typebox':
         specifier: ^0.34.49
         version: 0.34.49
@@ -20,6 +23,9 @@ importers:
       openclaw:
         specifier: ^2026.4.2
         version: 2026.4.2(@napi-rs/canvas@0.1.97)
+      sharp:
+        specifier: ^0.34.0
+        version: 0.34.5
     devDependencies:
       '@types/node':
         specifier: ^25.5.2
@@ -599,8 +605,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@indreamai/client@0.3.0':
-    resolution: {integrity: sha512-tzVdHUgCv0Ke8j8tHMv/qZWvgopB2R++WV4sgj4b0jOeSarfG2o8Zd4E2K4Gl8HXam7xvuLhkjgSMiYdc+3sIw==}
+  '@indreamai/client@1.0.0':
+    resolution: {integrity: sha512-xfU3sKjKNDprfERPRzeLUJoCzD2q/lSCsF/ixwFnh0innY5TPJNtDLB9Q9t2uHKntENfZDn7F+GjLgZ0b9hToQ==}
     engines: {node: '>=18'}
 
   '@isaacs/fs-minipass@4.0.1':
@@ -875,6 +881,9 @@ packages:
 
   '@protobufjs/utf8@1.1.0':
     resolution: {integrity: sha512-Vvn3zZrhQZkkBE8LSuW3em98c0FwgO4nxzv6OdSxPKJIEKY2bGbHn+mhGIPerzI4twdxaP8/0+06HBpwf345Lw==}
+
+  '@remotion/layout-utils@4.0.431':
+    resolution: {integrity: sha512-EwIkWCKWF/cT3w3ocVa5NtsUPZxk9wQklHFxWiHCSS2Gc6AdVd43ilYXAwKTWoKVhtZ9Kj9GzzB6EUB53RK7DQ==}
 
   '@rolldown/binding-android-arm64@1.0.0-rc.12':
     resolution: {integrity: sha512-pv1y2Fv0JybcykuiiD3qBOBdz6RteYojRFY1d+b95WVuzx211CRh+ytI/+9iVyWQ6koTh5dawe4S/yRfOFjgaA==}
@@ -4018,7 +4027,7 @@ snapshots:
   '@img/sharp-win32-x64@0.34.5':
     optional: true
 
-  '@indreamai/client@0.3.0': {}
+  '@indreamai/client@1.0.0': {}
 
   '@isaacs/fs-minipass@4.0.1':
     dependencies:
@@ -4322,6 +4331,8 @@ snapshots:
   '@protobufjs/pool@1.1.0': {}
 
   '@protobufjs/utf8@1.1.0': {}
+
+  '@remotion/layout-utils@4.0.431': {}
 
   '@rolldown/binding-android-arm64@1.0.0-rc.12':
     optional: true

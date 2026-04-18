@@ -1,0 +1,58 @@
+{
+  "$id": "block:illustration-board",
+  "description": "Illustration centered on a colored background with headline beneath. All ratios.",
+  "supportedRatios": ["16:9", "9:16", "1:1", "4:3", "3:4"],
+  "requiredSlots": [],
+  "optionalSlots": [],
+  "overridableFields": ["illustrationName", "illustrationColor", "headline", "accentColor", "bgColor"],
+  "defaults": {
+    "illustrationName": "rocket",
+    "illustrationColor": "#ffffff",
+    "headline": "",
+    "accentColor": "#ffffff",
+    "bgColor": "#1e3a5f"
+  },
+  "skeleton": {
+    "tracks": {
+      "{sceneId}-bg": [
+        {
+          "id": "{sceneId}-bg",
+          "type": "solid",
+          "startMs": 0,
+          "durationMs": "{durationMs}",
+          "color": "{bgColor}",
+          "size": { "width": "{compositionWidth}", "height": "{compositionHeight}" },
+          "position": { "x": 0, "y": 0 },
+          "zIndex": 0
+        }
+      ],
+      "{sceneId}-illustration": [
+        {
+          "id": "{sceneId}-illus",
+          "type": "illustration",
+          "startMs": 0,
+          "durationMs": "{durationMs}",
+          "illustrationName": "{illustrationName}",
+          "illustrationColor": "{illustrationColor}",
+          "size": { "width": 0.5, "height": 0.5 },
+          "position": { "x": 0.25, "y": 0.2 },
+          "zIndex": 1,
+          "animation": { "in": "zoom-in" }
+        }
+      ],
+      "{sceneId}-text": [
+        {
+          "id": "{sceneId}-headline",
+          "type": "text",
+          "startMs": 60,
+          "durationMs": "{durationMs}",
+          "text": { "content": "{headline}", "fontWeight": 600, "fontSize": 64, "color": "{accentColor}", "align": "center" },
+          "size": { "width": 0.8, "height": 180 },
+          "position": { "x": 0.1, "y": 0.74 },
+          "zIndex": 2,
+          "animation": { "in": "fade" }
+        }
+      ]
+    }
+  }
+}

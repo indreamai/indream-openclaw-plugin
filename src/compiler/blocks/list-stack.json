@@ -1,0 +1,90 @@
+{
+  "$id": "block:list-stack",
+  "description": "Vertically stacked bullet list with a headline. Dark bg. Best for 16:9 and 9:16.",
+  "supportedRatios": ["16:9", "9:16", "1:1", "4:3", "3:4"],
+  "requiredSlots": [],
+  "optionalSlots": [],
+  "overridableFields": ["headline", "item1", "item2", "item3", "item4", "accentColor", "bgColor"],
+  "defaults": {
+    "headline": "Key Points",
+    "item1": "Point one",
+    "item2": "Point two",
+    "item3": "Point three",
+    "item4": "",
+    "accentColor": "#3b82f6",
+    "bgColor": "#111111"
+  },
+  "skeleton": {
+    "tracks": {
+      "{sceneId}-bg": [
+        {
+          "id": "{sceneId}-bg",
+          "type": "solid",
+          "startMs": 0,
+          "durationMs": "{durationMs}",
+          "color": "{bgColor}",
+          "size": { "width": "{compositionWidth}", "height": "{compositionHeight}" },
+          "position": { "x": 0, "y": 0 },
+          "zIndex": 0
+        }
+      ],
+      "{sceneId}-text": [
+        {
+          "id": "{sceneId}-headline",
+          "type": "text",
+          "startMs": 0,
+          "durationMs": "{durationMs}",
+          "text": { "content": "{headline}", "fontWeight": 700, "fontSize": 72, "color": "#ffffff", "align": "left" },
+          "size": { "width": 0.82, "height": 160 },
+          "position": { "x": 0.09, "y": 0.1 },
+          "zIndex": 1,
+          "animation": { "in": "fade" }
+        },
+        {
+          "id": "{sceneId}-item1",
+          "type": "text",
+          "startMs": 80,
+          "durationMs": "{durationMs}",
+          "text": { "content": "→  {item1}", "fontWeight": 500, "fontSize": 52, "color": "{accentColor}", "align": "left" },
+          "size": { "width": 0.82, "height": 100 },
+          "position": { "x": 0.09, "y": 0.3 },
+          "zIndex": 1,
+          "animation": { "in": "slide-up" }
+        },
+        {
+          "id": "{sceneId}-item2",
+          "type": "text",
+          "startMs": 140,
+          "durationMs": "{durationMs}",
+          "text": { "content": "→  {item2}", "fontWeight": 500, "fontSize": 52, "color": "{accentColor}", "align": "left" },
+          "size": { "width": 0.82, "height": 100 },
+          "position": { "x": 0.09, "y": 0.44 },
+          "zIndex": 1,
+          "animation": { "in": "slide-up" }
+        },
+        {
+          "id": "{sceneId}-item3",
+          "type": "text",
+          "startMs": 200,
+          "durationMs": "{durationMs}",
+          "text": { "content": "→  {item3}", "fontWeight": 500, "fontSize": 52, "color": "{accentColor}", "align": "left" },
+          "size": { "width": 0.82, "height": 100 },
+          "position": { "x": 0.09, "y": 0.58 },
+          "zIndex": 1,
+          "animation": { "in": "slide-up" }
+        },
+        {
+          "id": "{sceneId}-item4",
+          "type": "text",
+          "startMs": 260,
+          "durationMs": "{durationMs}",
+          "text": { "content": "→  {item4}", "fontWeight": 500, "fontSize": 52, "color": "{accentColor}", "align": "left" },
+          "size": { "width": 0.82, "height": 100 },
+          "position": { "x": 0.09, "y": 0.72 },
+          "zIndex": 1,
+          "animation": { "in": "slide-up" }
+        }
+      ]
+    }
+  }
+}

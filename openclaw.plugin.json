@@ -1,32 +1,37 @@
 {
   "id": "indream",
   "name": "Indream",
-  "description": "Indream video editor API tools and skills for OpenClaw",
-  "version": "0.2.0",
+  "description": "Indream video workflow tools and skills for OpenClaw (v6)",
+  "version": "0.3.0",
   "skills": [
     "./skills"
   ],
   "contracts": {
     "tools": [
       "indream_editor_capabilities",
-      "indream_editor_validate",
-      "indream_projects_list",
-      "indream_projects_get",
-      "indream_projects_list_assets",
-      "indream_assets_get",
-      "indream_exports_get",
-      "indream_exports_list",
-      "indream_exports_wait",
-      "indream_projects_create",
-      "indream_projects_update",
-      "indream_projects_sync",
-      "indream_projects_delete",
-      "indream_projects_add_asset",
-      "indream_projects_remove_asset",
+      "indream_illustrations_search",
       "indream_assets_upload",
-      "indream_assets_delete",
-      "indream_exports_create",
-      "indream_projects_create_export"
+      "indream_assets_get",
+      "indream_asset_analyze",
+      "indream_video_workflow_init",
+      "indream_video_workflow_set_design",
+      "indream_video_workflow_set_script",
+      "indream_video_workflow_set_storyboard",
+      "indream_video_workflow_revise",
+      "indream_video_workflow_review",
+      "indream_video_workflow_gate_advance",
+      "indream_video_workflow_scene_submit",
+      "indream_video_workflow_scene_list",
+      "indream_video_workflow_build",
+      "indream_video_workflow_block_list",
+      "indream_video_workflow_block_read",
+      "indream_video_workflow_snapshot",
+      "indream_video_workflow_commit",
+      "indream_video_projects_create",
+      "indream_video_projects_sync",
+      "indream_video_exports_create",
+      "indream_exports_get",
+      "indream_exports_download"
     ]
   },
   "uiHints": {
@@ -50,6 +55,10 @@
     },
     "uploads": {
       "label": "Upload controls",
+      "advanced": true
+    },
+    "analysis": {
+      "label": "Asset analysis",
       "advanced": true
     }
   },
@@ -91,6 +100,19 @@
         "default": {
           "allowLocalPaths": true,
           "allowRemoteUrls": true
+        }
+      },
+      "analysis": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "enableLocalSharp": {
+            "type": "boolean",
+            "default": true
+          }
+        },
+        "default": {
+          "enableLocalSharp": true
         }
       }
     }

@@ -1,0 +1,66 @@
+{
+  "$id": "block:title-card",
+  "description": "Opening title card with headline, subheadline, and optional accent bar. Dark bg. All ratios.",
+  "supportedRatios": ["16:9", "9:16", "1:1", "4:3", "3:4"],
+  "requiredSlots": [],
+  "optionalSlots": [],
+  "overridableFields": ["headline", "subheadline", "accentColor", "bgColor"],
+  "defaults": {
+    "headline": "Video Title",
+    "subheadline": "Subtitle goes here",
+    "accentColor": "#3b82f6",
+    "bgColor": "#0a0a0a"
+  },
+  "skeleton": {
+    "tracks": {
+      "{sceneId}-bg": [
+        {
+          "id": "{sceneId}-bg",
+          "type": "solid",
+          "startMs": 0,
+          "durationMs": "{durationMs}",
+          "color": "{bgColor}",
+          "size": { "width": "{compositionWidth}", "height": "{compositionHeight}" },
+          "position": { "x": 0, "y": 0 },
+          "zIndex": 0
+        }
+      ],
+      "{sceneId}-accent": [
+        {
+          "id": "{sceneId}-bar",
+          "type": "solid",
+          "startMs": 0,
+          "durationMs": "{durationMs}",
+          "color": "{accentColor}",
+          "size": { "width": 0.06, "height": 0.12 },
+          "position": { "x": 0.47, "y": 0.32 },
+          "zIndex": 1
+        }
+      ],
+      "{sceneId}-text": [
+        {
+          "id": "{sceneId}-headline",
+          "type": "text",
+          "startMs": 0,
+          "durationMs": "{durationMs}",
+          "text": { "content": "{headline}", "fontWeight": 800, "fontSize": 96, "color": "#ffffff", "align": "center" },
+          "size": { "width": 0.86, "height": 240 },
+          "position": { "x": 0.07, "y": 0.42 },
+          "zIndex": 2,
+          "animation": { "in": "fade" }
+        },
+        {
+          "id": "{sceneId}-sub",
+          "type": "text",
+          "startMs": 80,
+          "durationMs": "{durationMs}",
+          "text": { "content": "{subheadline}", "fontWeight": 400, "fontSize": 48, "color": "#aaaaaa", "align": "center" },
+          "size": { "width": 0.7, "height": 120 },
+          "position": { "x": 0.15, "y": 0.66 },
+          "zIndex": 2,
+          "animation": { "in": "fade" }
+        }
+      ]
+    }
+  }
+}

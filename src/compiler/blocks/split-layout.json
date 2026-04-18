@@ -1,0 +1,76 @@
+{
+  "$id": "block:split-layout",
+  "description": "Left/right split: media on one side, text on the other. Best for 16:9 and 4:3.",
+  "supportedRatios": ["16:9", "4:3", "1:1"],
+  "requiredSlots": ["primary"],
+  "optionalSlots": [],
+  "overridableFields": ["headline", "subheadline", "body", "accentColor", "mediaOnLeft"],
+  "defaults": {
+    "headline": "Section Title",
+    "subheadline": "",
+    "body": "",
+    "accentColor": "#ffffff",
+    "mediaOnLeft": true
+  },
+  "skeleton": {
+    "tracks": {
+      "{sceneId}-media": [
+        {
+          "id": "{sceneId}-media",
+          "type": "image",
+          "startMs": 0,
+          "durationMs": "{durationMs}",
+          "asset": "{slot:primary}",
+          "size": { "width": 0.5, "height": 1 },
+          "position": { "x": 0, "y": 0 },
+          "zIndex": 0
+        }
+      ],
+      "{sceneId}-text-panel": [
+        {
+          "id": "{sceneId}-panel",
+          "type": "solid",
+          "startMs": 0,
+          "durationMs": "{durationMs}",
+          "color": "#111111",
+          "size": { "width": 0.5, "height": 1 },
+          "position": { "x": 0.5, "y": 0 },
+          "zIndex": 1
+        },
+        {
+          "id": "{sceneId}-headline",
+          "type": "text",
+          "startMs": 0,
+          "durationMs": "{durationMs}",
+          "text": { "content": "{headline}", "fontWeight": 700, "fontSize": 72, "color": "{accentColor}", "align": "left" },
+          "size": { "width": 0.44, "height": 200 },
+          "position": { "x": 0.53, "y": 0.3 },
+          "zIndex": 2,
+          "animation": { "in": "slide-left" }
+        },
+        {
+          "id": "{sceneId}-sub",
+          "type": "text",
+          "startMs": 60,
+          "durationMs": "{durationMs}",
+          "text": { "content": "{subheadline}", "fontWeight": 400, "fontSize": 44, "color": "#cccccc", "align": "left" },
+          "size": { "width": 0.44, "height": 120 },
+          "position": { "x": 0.53, "y": 0.52 },
+          "zIndex": 2,
+          "animation": { "in": "fade" }
+        },
+        {
+          "id": "{sceneId}-body",
+          "type": "text",
+          "startMs": 100,
+          "durationMs": "{durationMs}",
+          "text": { "content": "{body}", "fontWeight": 400, "fontSize": 36, "color": "#aaaaaa", "align": "left" },
+          "size": { "width": 0.44, "height": 200 },
+          "position": { "x": 0.53, "y": 0.62 },
+          "zIndex": 2,
+          "animation": { "in": "fade" }
+        }
+      ]
+    }
+  }
+}

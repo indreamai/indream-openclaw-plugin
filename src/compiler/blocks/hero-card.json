@@ -1,0 +1,67 @@
+{
+  "$id": "block:hero-card",
+  "description": "Full-frame hero with primary media + headline at bottom. Works across 16:9, 9:16, 1:1.",
+  "supportedRatios": ["16:9", "9:16", "1:1", "4:3", "3:4"],
+  "requiredSlots": ["primary"],
+  "optionalSlots": ["badge"],
+  "overridableFields": ["headline", "subheadline", "accentColor", "overlayOpacity"],
+  "defaults": {
+    "headline": "Your Headline",
+    "subheadline": "",
+    "accentColor": "#ffffff",
+    "overlayOpacity": 0.35
+  },
+  "skeleton": {
+    "tracks": {
+      "{sceneId}-media": [
+        {
+          "id": "{sceneId}-bg",
+          "type": "image",
+          "startMs": 0,
+          "durationMs": "{durationMs}",
+          "asset": "{slot:primary}",
+          "size": { "width": "{compositionWidth}", "height": "{compositionHeight}" },
+          "position": { "x": 0, "y": 0 },
+          "zIndex": 0
+        }
+      ],
+      "{sceneId}-overlay": [
+        {
+          "id": "{sceneId}-overlay",
+          "type": "solid",
+          "startMs": 0,
+          "durationMs": "{durationMs}",
+          "color": "#000000",
+          "opacity": "{overlayOpacity}",
+          "size": { "width": "{compositionWidth}", "height": "{compositionHeight}" },
+          "position": { "x": 0, "y": 0 },
+          "zIndex": 1
+        }
+      ],
+      "{sceneId}-text": [
+        {
+          "id": "{sceneId}-headline",
+          "type": "text",
+          "startMs": 0,
+          "durationMs": "{durationMs}",
+          "text": { "content": "{headline}", "fontWeight": 700, "fontSize": 80, "color": "{accentColor}", "align": "center" },
+          "size": { "width": "{compositionWidth}", "height": 200 },
+          "position": { "x": 0, "y": 0.72 },
+          "zIndex": 2,
+          "animation": { "in": "fade" }
+        },
+        {
+          "id": "{sceneId}-sub",
+          "type": "text",
+          "startMs": 80,
+          "durationMs": "{durationMs}",
+          "text": { "content": "{subheadline}", "fontWeight": 400, "fontSize": 44, "color": "{accentColor}", "align": "center" },
+          "size": { "width": "{compositionWidth}", "height": 100 },
+          "position": { "x": 0, "y": 0.82 },
+          "zIndex": 2,
+          "animation": { "in": "fade" }
+        }
+      ]
+    }
+  }
+}

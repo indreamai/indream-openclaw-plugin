@@ -1,7 +1,7 @@
 {
   "name": "@indreamai/openclaw-plugin",
-  "version": "0.2.0",
-  "description": "OpenClaw plugin for Indream video editor API workflows",
+  "version": "0.3.0",
+  "description": "OpenClaw plugin for Indream video workflow tools",
   "type": "module",
   "files": [
     "dist",
@@ -40,9 +40,11 @@
   },
   "packageManager": "pnpm@10.26.1",
   "dependencies": {
-    "@indreamai/client": "^0.3.0",
+    "@remotion/layout-utils": "4.0.431",
+    "@indreamai/client": "^1.0.0",
     "@sinclair/typebox": "^0.34.49",
     "mime-types": "^3.0.2",
+    "sharp": "^0.34.0",
     "openclaw": "^2026.4.2"
   },
   "devDependencies": {
